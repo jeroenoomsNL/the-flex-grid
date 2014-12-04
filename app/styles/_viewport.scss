@@ -1,0 +1,68 @@
+//
+// Viewport mixin
+//
+@mixin viewport($viewport) {
+
+    @if $viewport != default {
+        $viewport: -#{$viewport};
+    }
+
+    .col#{$viewport}-1 {
+        flex-basis: 8.3333333333%;
+    }
+    .col#{$viewport}-2 {
+        flex-basis: 16.666666666%;
+    }
+    .col#{$viewport}-3 {
+        flex-basis: 25%;
+    }
+    .col#{$viewport}-4 {
+        flex-basis: 33.333333333%;
+    }
+    .col#{$viewport}-5 {
+        flex-basis: 41.666666666%;
+    }
+    .col#{$viewport}-6 {
+        flex-basis: 50%;
+    }
+    .col#{$viewport}-7 {
+        flex-basis: 58.333333333%;
+    }
+    .col#{$viewport}-8 {
+        flex-basis: 66.666666666%;
+    }
+    .col#{$viewport}-9 {
+        flex-basis: 75%;
+    }
+    .col#{$viewport}-10 {
+        flex-basis: 83.333333333%;
+    }
+    .col#{$viewport}-11 {
+        flex-basis: 91.666666666%;
+    }
+    .col#{$viewport}-12 {
+        flex-basis: 100%;
+    }
+
+
+    .row#{$viewport}-left {
+      justify-content: flex-start;
+    }
+    .row#{$viewport}-right {
+      justify-content: flex-end;
+    }
+    .row#{$viewport}-center {
+      justify-content: center;
+    }
+    .row#{$viewport}-space-between {
+      justify-content: space-between;
+    }
+    .row#{$viewport}-space-around {
+      justify-content: space-around;
+    }
+
+    .row#{$viewport}-reverse {
+        flex-direction: row-reverse;
+    }
+
+}

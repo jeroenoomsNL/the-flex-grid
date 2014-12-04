@@ -1,0 +1,88 @@
+/*
+ * Config
+ */
+$gutter: 15px;
+$grid-maxwidth: 960px;
+
+
+
+/*
+ * Imports
+ */
+@import "viewport";
+
+
+
+/*
+ * Generic grid styles
+ */
+.row .row > div > .box {
+    background: #aaaaaa;
+}
+
+.grid {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: $grid-maxwidth;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -#{$gutter};
+}
+
+.row > div {
+    box-sizing: border-box;
+    padding: $gutter;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-height: 800px;
+    height: 100vw;
+}
+
+.column > div {
+    box-sizing: border-box;
+    padding: $gutter;
+    flex-basis: 1;
+}
+
+
+/*
+ * Default view
+ */
+@include viewport(default);
+
+
+
+/*
+ * Small viewport (mobile)
+ */
+@include viewport(small);
+
+
+
+/*
+ * Medium viewport (tablets)
+ */
+@media (min-width: 768px) {
+
+    @include viewport(medium);
+
+}
+
+
+
+/*
+ * Large viewport (desktop)
+ */
+@media (min-width: 960px) {
+
+    @include viewport(large);
+
+}

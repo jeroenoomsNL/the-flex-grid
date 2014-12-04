@@ -1,0 +1,25 @@
+{
+  "name": "the-flex-grid",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "connect": "^2.14.4",
+    "connect-livereload": "^0.4.0",
+    "gulp": "^3.6.0",
+    "gulp-autoprefixer": "^0.0.7",
+    "gulp-clean": "^0.2.4",
+    "gulp-csso": "^0.2.6",
+    "gulp-filter": "^0.4.1",
+    "gulp-highlight": "0.0.3",
+    "gulp-livereload": "^1.2.0",
+    "gulp-load-plugins": "^0.5.0",
+    "gulp-ruby-sass": "^0.4.3",
+    "gulp-size": "^0.3.0",
+    "gulp-useref": "^0.4.2",
+    "opn": "^0.1.1",
+    "wiredep": "^1.4.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
