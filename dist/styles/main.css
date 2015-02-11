@@ -1,0 +1,13 @@
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+[class*="col-"] {
+  background: #ABB7B7;
+  border: 1px solid #95A5A6;
+  color: #222222;
+  min-height: 3em;
+  text-align: center;
+}
