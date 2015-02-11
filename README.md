@@ -1,35 +1,111 @@
-The Flex Grid
-===========
+# The Flex Grid
 
-The Flex Grid is an lightweight grid build with CSS3 feature flexbox. Just because we can! The grid is made for modern browsers, there is no support for dinosaurs.
+The Flex Grid is an lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs. The max-width of the grid and the with of the gutter are easily customizable by the globals in the SASS file.
 
-<h2>The Grid</h2>
-The Flex Grid has 12 columns, just like Bootstrap. Each columns
-
+## Fluid grid
 
 ```
-<div class="grid">
-    <div class="row">
-        <div class="col-12">
-            <div class="box"></div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-3">
-            <div class="box"></div>
-        </div>
-        <div class="col-9">
-            <div class="box"></div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-6">
-            <div class="box"></div>
-        </div>
-        <div class="col-6">
-            <div class="box"></div>
-        </div>
+<div class="row">
+    <div class="col-12">
+        .col-12
     </div>
 </div>
+
+<div class="row">
+    <div class="col-3">
+        .col-3
+    </div>
+    <div class="col-9">
+        .col-9
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+        .col-4
+    </div>
+    <div class="col-8">
+        .col-8
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        .col-6
+    </div>
+    <div class="col-6">
+        .col-6
+    </div>
+</div>
+
 ```
+
+## Responsive grid
+
+```
+<div class="row">
+    <div class="col-large-12 col-medium-6">
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-large-3 col-medium-6 col-small-12">
+        
+    </div>
+    <div class="col-large-9 col-medium-9 col-small-12">
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-large-4">
+        
+    </div>
+    <div class="col-large-8">
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-large-6">
+        
+    </div>
+    <div class="col-large-6">
+        
+    </div>
+</div>
+
+```
+
+## More features
+
+View index.html for a demo of all the features like reverse order and alignment.
+
+## Usage
+
+After cloning the repository:
+
+```
+npm install
+
+```
+
+To run build the project:
+
+```
+gulp
+
+```
+To watch and autorelease while editing:
+
+```
+gulp watch
+
+```
+
+
+
+
+
 

@@ -1,7 +1,7 @@
 /*
  * Config
  */
-$gutter: 15px;
+$gutter: 1em;
 $grid-maxwidth: 960px;
 
 
@@ -22,14 +22,14 @@ $grid-maxwidth: 960px;
 
 .grid {
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 $gutter;
     max-width: $grid-maxwidth;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -#{$gutter};
+    margin: 0 -#{$gutter} $gutter -#{$gutter};
 }
 
 .row > div {

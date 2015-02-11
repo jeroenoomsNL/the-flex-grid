@@ -4,14 +4,12 @@ body {
     color: #333;
 }
 
-.box {
+[class*="col-"] {
     background: #ABB7B7;
     border: 1px solid #95A5A6;
     color: #222222;
     min-height: 3em;
-    line-height: 3em;
     text-align: center;
-    width: 100%;
 }
 
 

@@ -7,6 +7,10 @@
         $viewport: -#{$viewport};
     }
 
+    @if $viewport == default {
+        $viewport: '';
+    }
+
     .col#{$viewport}-1 {
         flex-basis: 8.3333333333%;
     }

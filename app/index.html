@@ -20,80 +20,75 @@
         <div class="grid">
             <h1>The Flex Grid</h1>
 
-            <p>The Flex Grid is an lightweight grid build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs.</p>
+            <p>The Flex Grid is an lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs. The max-width of the grid and the with of the gutter are easily customizable by the globals in the SASS file.</p>
 
-            <h2>The Grid</h2>
-            <p>The Flex Grid has 12 columns, just like Bootstrap.</p>
+            <h2>Fluid grid</h2>
 
-            <div class="column">
-                <div class="col-2">
-                    <div class="box">2</div>
-                </div>
-                <div class="col-2">
-                    <div class="box">2</div>
-                </div>
-                <div class="col-6">
-                    <div class="box">6</div>
-                </div>
-                <div class="col-3">
-                    <div class="box">3</div>
-                </div>
-                <div class="col-3">
-                    <div class="box">3</div>
-                </div>
-                <div class="col-3">
-                    <div class="box">3</div>
-                </div>
-                <div class="col-2">
-                    <div class="box">2</div>
-                </div>
-                <div class="col-2">
-                    <div class="box">2</div>
-                </div>
-                <div class="col-6">
-                    <div class="box">6</div>
-                </div>
-                <div class="col-3">
-                    <div class="box">3</div>
-                </div>
-                <div class="col-3">
-                    <div class="box">3</div>
-                </div>
-                <div class="col-3">
-                    <div class="box">3</div>
+            <div class="row">
+                <div class="col-12">
+                    .col-12
                 </div>
             </div>
 
             <div class="row">
+                <div class="col-3">
+                    .col-3
+                </div>
+                <div class="col-9">
+                    .col-9
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    .col-4
+                </div>
+                <div class="col-8">
+                    .col-8
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    .col-6
+                </div>
+                <div class="col-6">
+                    .col-6
+                </div>
+            </div>
+
+            <h2>Responsive grid</h2>
+
+            <div class="row">
                 <div class="col-large-12 col-medium-6">
-                    <div class="box"></div>
+                    
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-large-3 col-medium-6 col-small-12">
-                    <div class="box"></div>
+                    
                 </div>
                 <div class="col-large-9 col-medium-9 col-small-12">
-                    <div class="box"></div>
+                    
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-large-4">
-                    <div class="box"></div>
+                    
                 </div>
                 <div class="col-large-8">
-                    <div class="box"></div>
+                    
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-large-6">
-                    <div class="box"></div>
+                    
                 </div>
                 <div class="col-large-6">
-                    <div class="box"></div>
+                    
                 </div>
             </div>
 
@@ -101,13 +96,13 @@
             <p>Extend a row with the class <em>row-reverse</em> to reverse the order of the columns.</p>
 
             <div class="row row-reverse">
-                <div class="col-large-4">
+                <div class="col-4">
                     <div class="box">1</div>
                 </div>
-                <div class="col-large-4">
+                <div class="col-4">
                     <div class="box">2</div>
                 </div>
-                <div class="col-large-4">
+                <div class="col-4">
                     <div class="box">3</div>
                 </div>
             </div>
@@ -116,67 +111,43 @@
 
             <h3>Align left</h3>
             <div class="row row-left">
-                <div class="col-large-2">
-                    <div class="box"></div>
+                <div class="col-2">
+                    
                 </div>
-                <div class="col-large-3">
-                    <div class="box"></div>
+                <div class="col-3">
+                    
                 </div>
-                <div class="col-large-2">
-                    <div class="box"></div>
+                <div class="col-2">
+                    
                 </div>
             </div>
 
             <h3>Align right</h3>
             <div class="row row-right">
-                <div class="col-large-2">
-                    <div class="box"></div>
-                </div>
-                <div class="col-large-3">
-                    <div class="box"></div>
-                </div>
-                <div class="col-large-2">
-                    <div class="box"></div>
-                </div>
+                <div class="col-2"></div>
+                <div class="col-3"></div>
+                <div class="col-2"></div>
             </div>
 
             <h3>Align center</h3>
             <div class="row row-center">
-                <div class="col-large-2">
-                    <div class="box">col-large-2</div>
-                </div>
-                <div class="col-large-3">
-                    <div class="box">col-large-3</div>
-                </div>
-                <div class="col-large-2">
-                    <div class="box">col-large-2</div>
-                </div>
+                <div class="col-2"></div>
+                <div class="col-3"></div>
+                <div class="col-2"></div>
             </div>
 
             <h3>Space between</h3>
             <div class="row row-space-between">
-                <div class="col-large-2">
-                    <div class="box">col-large-2</div>
-                </div>
-                <div class="col-large-3">
-                    <div class="box">col-large-3</div>
-                </div>
-                <div class="col-large-2">
-                    <div class="box">col-large-2</div>
-                </div>
+                <div class="col-2"></div>
+                <div class="col-3"></div>
+                <div class="col-2"></div>
             </div>
 
             <h3>Space around</h3>
             <div class="row row-space-around">
-                <div class="col-large-2">
-                    <div class="box">col-large-2</div>
-                </div>
-                <div class="col-large-3">
-                    <div class="box">col-large-3</div>
-                </div>
-                <div class="col-large-2">
-                    <div class="box">col-large-2</div>
-                </div>
+                <div class="col-2"></div>
+                <div class="col-3"></div>
+                <div class="col-2"></div>
             </div>
         </div>
 
