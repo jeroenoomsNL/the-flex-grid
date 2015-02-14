@@ -1,14 +1,14 @@
-/*
- * Config
- */
+//
+// Config
+//
 $gutter: 1em;
 $grid-maxwidth: 960px;
 
 
 
-/*
- * Imports
- */
+//
+// Imports
+//
 @import "viewport";
 
 
@@ -16,10 +16,6 @@ $grid-maxwidth: 960px;
 /*
  * Generic grid styles
  */
-.row .row > div > .box {
-    background: #aaaaaa;
-}
-
 .grid {
     margin: 0 auto;
     padding: 0 $gutter;
