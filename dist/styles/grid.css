@@ -1,16 +1,6 @@
 /*
- * Config
- */
-/*
- * Imports
- */
-/*
  * Generic grid styles
  */
-.row .row > div > .box {
-  background: #aaaaaa;
-}
-
 .grid {
   margin: 0 auto;
   padding: 0 1em;
