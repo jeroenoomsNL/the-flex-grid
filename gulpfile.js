@@ -13,6 +13,7 @@ gulp.task('styles', function () {
             precision: 10
         }))
         .pipe($.autoprefixer('last 2 versions'))
+
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
 });
@@ -23,17 +24,16 @@ gulp.task('html', ['styles'], function () {
     return gulp.src('app/*.html')
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
         .pipe(cssFilter)
-        //.pipe($.csso())
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
         .pipe($.useref())
         .pipe($.highlight())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('demo'))
         .pipe($.size());
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['.tmp', 'dist'], { read: false }).pipe($.clean());
+    return gulp.src(['.tmp', 'demo'], { read: false }).pipe($.clean());
 });
 
 gulp.task('build', ['html']);
