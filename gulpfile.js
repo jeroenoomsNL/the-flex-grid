@@ -2,6 +2,7 @@
 // generated on 2014-11-29 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp');
+var merge = require('merge-stream');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -13,7 +14,6 @@ gulp.task('styles', function () {
             precision: 10
         }))
         .pipe($.autoprefixer('last 2 versions'))
-
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
 });
@@ -21,15 +21,23 @@ gulp.task('styles', function () {
 gulp.task('html', ['styles'], function () {
     var cssFilter = $.filter('**/*.css');
 
-    return gulp.src('app/*.html')
+    var demo = gulp.src('app/*.html')
         .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
         .pipe(cssFilter)
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
         .pipe($.useref())
-        .pipe($.highlight())
+        //.pipe($.highlight())
         .pipe(gulp.dest('demo'))
         .pipe($.size());
+
+    var grid = gulp.src('.tmp/styles/grid.css')
+        .pipe(gulp.dest(''))
+        .pipe($.cssmin())
+        .pipe($.rename({suffix: '.min'}))
+        .pipe(gulp.dest(''));
+
+    return merge(demo, grid);
 });
 
 gulp.task('clean', function () {
