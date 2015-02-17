@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="The-flex-grid : Modern lightweight CSS grid using flexbox. Because we can!">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>The-flex-grid</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jeroenoomsNL/the-flex-grid">View on GitHub</a>
+
+          <h1 id="project_title">The-flex-grid</h1>
+          <h2 id="project_tagline">Modern lightweight CSS grid using flexbox. Because we can!</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jeroenoomsNL/the-flex-grid/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jeroenoomsNL/the-flex-grid/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="the-flex-grid" class="anchor" href="#the-flex-grid" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Flex Grid</h1>
+
+<p>The Flex Grid is an lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs. The max-width of the grid and the with of the gutter are easily customizable by the globals in the SASS file.</p>
+
+<p>Vendor prefixes are added for the last 2 versions of the most used webbrowers using autoprefixer. This can be changed in gulpfile.js</p>
+
+<h2>
+<a id="fluid-grid" class="anchor" href="#fluid-grid" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fluid grid</h2>
+
+<pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-12"&gt;
+        .col-12
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-3"&gt;
+        .col-3
+    &lt;/div&gt;
+    &lt;div class="col-9"&gt;
+        .col-9
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-4"&gt;
+        .col-4
+    &lt;/div&gt;
+    &lt;div class="col-8"&gt;
+        .col-8
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-6"&gt;
+        .col-6
+    &lt;/div&gt;
+    &lt;div class="col-6"&gt;
+        .col-6
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>
+<a id="responsive-grid" class="anchor" href="#responsive-grid" aria-hidden="true"><span class="octicon octicon-link"></span></a>Responsive grid</h2>
+
+<pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-large-12 col-medium-6"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-large-3 col-medium-6 col-small-12"&gt;&lt;/div&gt;
+    &lt;div class="col-large-9 col-medium-9 col-small-12"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-large-4"&gt;&lt;/div&gt;
+    &lt;div class="col-large-8"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-large-6"&gt;&lt;/div&gt;
+    &lt;div class="col-large-6"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h2>
+<a id="more-features" class="anchor" href="#more-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>More features</h2>
+
+<p>View index.html for a demo of all the features like reverse order and alignment.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>After cloning the repository:</p>
+
+<pre><code>npm install
+</code></pre>
+
+<p>Build the project:</p>
+
+<pre><code>gulp
+</code></pre>
+
+<p>Watch and auto refresh while editing:</p>
+
+<pre><code>gulp watch
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">The-flex-grid maintained by <a href="https://github.com/jeroenoomsNL">jeroenoomsNL</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
