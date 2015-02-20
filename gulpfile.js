@@ -27,13 +27,12 @@ gulp.task('html', ['styles'], function () {
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
         .pipe($.useref())
-        //.pipe($.highlight())
         .pipe(gulp.dest('demo'))
         .pipe($.size());
 
     var grid = gulp.src('.tmp/styles/grid.css')
         .pipe(gulp.dest(''))
-        .pipe($.cssmin())
+        .pipe($.csso())
         .pipe($.rename({suffix: '.min'}))
         .pipe(gulp.dest(''));
 
