@@ -64,6 +64,28 @@ Vendor prefixes are added for the last 2 versions of the most used webbrowers us
 </div>
 ```
 
+## Smart columns
+
+```
+<div class="row">
+    <div class="col-4">
+        .col-4
+    </div>
+    <div class="col">
+        .col
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        .col
+    </div>
+    <div class="col-9">
+        .col-9
+    </div>
+</div>
+```
+
 ## More features
 
 View index.html for a demo of all the features like reverse order and alignment.

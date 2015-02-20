@@ -18,7 +18,7 @@
 
 .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 0 -#{$gutter} $gutter -#{$gutter};
 }
 
@@ -26,20 +26,6 @@
     box-sizing: border-box;
     padding: $gutter;
     width: 100%;
-}
-
-.column {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    max-height: 800px;
-    height: 100vw;
-}
-
-.column > div {
-    box-sizing: border-box;
-    padding: $gutter;
-    flex-basis: 1;
 }
 
 
