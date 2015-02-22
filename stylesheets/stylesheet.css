@@ -126,6 +126,9 @@ pre, code {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
 
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
