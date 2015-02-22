@@ -7,8 +7,8 @@
 	<meta name="description" content="The-flex-grid : Modern lightweight CSS grid using flexbox. Because we can!">
 
 	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.rawgit.com/jeroenoomsNL/the-flex-grid/15a6c18e4176d7c60b296a3cab323d792ad9bf82/grid.css">
-	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.rawgit.com/jeroenoomsNL/the-flex-grid/master/demo/styles/main.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.rawgit.com/jeroenoomsNL/the-flex-grid/master/demo/styles/grid.css">
+	<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.rawgit.com/jeroenoomsNL/the-flex-grid/master/demo/styles/demo.css">
 	<title>The Flex Grid</title>
   </head>
 
@@ -130,7 +130,7 @@
 &lt;/div&gt;
 </code></pre>
 
-<h2><a id="responsive-grid" class="anchor" href="#smart-columns" aria-hidden="true"><span class="octicon octicon-link"></span></a>Smart columns</h2>
+<h2><a id="smart-columns" class="anchor" href="#smart-columns" aria-hidden="true"><span class="octicon octicon-link"></span></a>Smart columns</h2>
 
 <div class="grid">
 	<div class="row">
@@ -158,10 +158,100 @@
 &lt;/div&gt;
 </code></pre>
 
-<h2>
-<a id="more-features" class="anchor" href="#more-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>More features</h2>
+<h2><a id="subgrids" class="anchor" href="#subgrids" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subgrids</h2>
+<h2>Subgrids</h2>
 
-<p>View index.html for a demo of all the features like reverse order and alignment.</p>
+<div class="grid">
+    <div class="row">
+        <div class="col-6">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-6">
+                        .col-6
+                    </div>
+                    <div class="col-6">
+                        .col-6
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        .col-3
+                    </div>
+                    <div class="col-9">
+                        .col-9
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-3">
+                        .col-3
+                    </div>
+                    <div class="col">
+                        .col
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        .col
+                    </div>
+                    <div class="col">
+                        .col
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="grid"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-6"&gt;
+            &lt;div class="grid"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-6"&gt;
+                        .col-6
+                    &lt;/div&gt;
+                    &lt;div class="col-6"&gt;
+                        .col-6
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-3"&gt;
+                        .col-3
+                    &lt;/div&gt;
+                    &lt;div class="col-9"&gt;
+                        .col-9
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-6"&gt;
+            &lt;div class="grid"&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col-3"&gt;
+                        .col-3
+                    &lt;/div&gt;
+                    &lt;div class="col"&gt;
+                        .col
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="row"&gt;
+                    &lt;div class="col"&gt;
+                        .col
+                    &lt;/div&gt;
+                    &lt;div class="col"&gt;
+                        .col
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
