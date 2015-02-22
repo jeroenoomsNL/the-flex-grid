@@ -19,15 +19,14 @@
 .row {
     display: flex;
     flex-wrap: nowrap;
-    margin: 0 -#{$gutter} $gutter -#{$gutter};
+    margin: 0  -#{$gutter/2} $gutter -#{$gutter/2};
 }
 
 .row > div {
     box-sizing: border-box;
-    padding: $gutter;
+    margin: 0 $gutter/2 0 $gutter/2;
     width: 100%;
 }
-
 
 /*
  * Default view

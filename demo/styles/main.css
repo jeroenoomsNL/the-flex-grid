@@ -9,8 +9,8 @@ body {
 
 [class*="col"] {
   background: #ABB7B7;
-  border: 1em solid #f2f2f2;
   color: #222222;
   min-height: 3em;
   text-align: center;
+  line-height: 3em;
 }

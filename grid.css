@@ -15,12 +15,12 @@
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  margin: 0 -1em 1em -1em;
+  margin: 0 -0.5em 1em -0.5em;
 }
 
 .row > div {
   box-sizing: border-box;
-  padding: 1em;
+  margin: 0 0.5em 0 0.5em;
   width: 100%;
 }
 
