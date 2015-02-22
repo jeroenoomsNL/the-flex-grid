@@ -417,6 +417,8 @@ Small Device Styles
   }
 
   code, pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     min-width: 320px;
     max-width: 480px;
     font-size: 11px;
