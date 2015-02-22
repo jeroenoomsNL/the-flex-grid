@@ -13,6 +13,7 @@
 .grid {
     margin: 0 auto;
     max-width: $grid-maxwidth;
+    overflow: hidden;
 }
 
 .row {
@@ -25,6 +26,10 @@
     box-sizing: border-box;
     margin: 0 $gutter/2 0 $gutter/2;
     width: 100%;
+}
+
+.row:last-child {
+    margin-bottom: 0;
 }
 
 /*

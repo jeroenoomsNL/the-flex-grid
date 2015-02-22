@@ -20,4 +20,6 @@ body {
     line-height: 3em;
 }
 
-
+[class*="col"] > .grid > .row > [class*="col"] {
+	background: #CCC;
+}
