@@ -52,7 +52,7 @@ Vendor prefixes are added for the last 2 versions of the most used webbrowers us
 
 ## More features
 
-View index.html for a demo of all the features like reverse order and alignment.
+See the [demo page] for all the other features like reverse order and alignment.
 
 ## Usage
 
@@ -73,6 +73,9 @@ Watch and auto refresh while editing:
 gulp watch
 ```
 
+
+
+[demo page]:http://jeroenoomsnl.github.io/the-flex-grid/
 
 
 
