@@ -8,13 +8,16 @@ body {
 }
 
 [class*="col"] {
-  background: #ABB7B7;
-  color: #222222;
+  background: #bdc3c7;
+  border: 1px solid #95a5a6;
+  border-radius: 5px;
+  color: #34495e;
+  line-height: 3em;
   min-height: 3em;
   text-align: center;
-  line-height: 3em;
 }
 
 [class*="col"] > .grid > .row > [class*="col"] {
-  background: #CCC;
+  background: #ecf0f1;
+  border: 0;
 }
