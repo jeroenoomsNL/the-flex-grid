@@ -4,6 +4,8 @@ The Flex Grid is an lightweight 12 columns grid, build with CSS3 feature flexbox
 
 Vendor prefixes are added for the last 2 versions of the most used webbrowers using autoprefixer. This can be changed in gulpfile.js
 
+[http://jeroenoomsnl.github.io/the-flex-grid]
+
 ## Fluid flexbox grid
 
 ```
@@ -75,7 +77,8 @@ gulp watch
 
 
 
-[demo page]:http://jeroenoomsnl.github.io/the-flex-grid/
+[http://jeroenoomsnl.github.io/the-flex-grid]:http://jeroenoomsnl.github.io/the-flex-grid
+[demo page]:http://jeroenoomsnl.github.io/the-flex-grid
 
 
 
