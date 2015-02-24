@@ -1,211 +1,488 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>The Flex Grid</title>
-        <meta name="description" content="">
+        <meta name="description" content="The Flex Grid is an lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
         <!-- build:css styles/demo.css -->
+        <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/demo.css">
         <!-- endbuild -->
 
         <!-- build:css styles/grid.css -->
         <link rel="stylesheet" href="styles/grid.css">
         <!-- endbuild -->
-
     </head>
     <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-        <div class="grid">
-            <h1>The Flex Grid</h1>
-
-            <p>The Flex Grid is an lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs. The max-width of the grid and the with of the gutter are easily customizable by the globals in the SASS file.</p>
-
-            <h2>Fluid grid</h2>
-
-            <div class="row">
-                <div class="col-12">
-                    .col-12
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-3">
-                    .col-3
-                </div>
-                <div class="col-9">
-                    .col-9
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-4">
-                    .col-4
-                </div>
-                <div class="col-8">
-                    .col-8
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-6">
-                    .col-6
-                </div>
-                <div class="col-6">
-                    .col-6
-                </div>
-            </div>
-
-            <h2>Responsive grid</h2>
-
-            <div class="row">
-                <div class="col-large-12 col-medium-6">
-                    
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-large-3 col-medium-6 col-small-12">
-                    
-                </div>
-                <div class="col-large-9 col-medium-9 col-small-12">
-                    
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-large-4">
-                    
-                </div>
-                <div class="col-large-8">
-                    
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-large-6">
-                    
-                </div>
-                <div class="col-large-6">
-                    
-                </div>
-            </div>
-
-            <h2>Subgrids</h2>
-
-            <div class="grid">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="grid">
-                            <div class="row">
-                                <div class="col-6">
-                                    .col-6
-                                </div>
-                                <div class="col-6">
-                                    .col-6
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    .col-3
-                                </div>
-                                <div class="col-9">
-                                    .col-9
-                                </div>
-                            </div>
+        <header>
+            <section>
+                <div class="grid">
+                    <div class="row">
+                        <div class="col-large-9">
+                            <h1>The Flex Grid</h1>
+                            <h2>Lightweight responsive CSS grid using flexbox. Because we can!</h2>
                         </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="grid">
-                            <div class="row">
-                                <div class="col-3">
-                                    .col-3
-                                </div>
-                                <div class="col">
-                                    .col
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    .col
-                                </div>
-                                <div class="col">
-                                    .col
-                                </div>
-                            </div>
+                        <div class="col-large-3">
+                            <a href="https://github.com/jeroenoomsNL/the-flex-grid/archive/master.zip" class="header-button"><i class="fa fa-download"></i> Download source</a>
+                            <a href="https://github.com/jeroenoomsNL/the-flex-grid" class="header-button" target="_blank"><i class="fa fa-github"></i> Fork on Github</a>
                         </div>
                     </div>
                 </div>
+            </section>
+        </header>
+
+        <section class="demo">
+<p>The Flex Grid is an lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs.</p>
+
+<h3>Fluid grid</h3>
+
+<div class="grid">
+    <div class="row">
+        <div class="col-12">
+            <div class="content"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+            <div class="content"></div>
+        </div>
+        <div class="col-9">
+            <div class="content"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="content"></div>
+        </div>
+        <div class="col-8">
+            <div class="content"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <div class="content"></div>
+        </div>
+        <div class="col-6">
+            <div class="content"></div>
+        </div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="grid"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-12"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="col-3"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-9"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-8"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="col-6"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-6"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Responsive grid</h3>
+
+<div class="grid">
+    <div class="row">
+        <div class="col-large-12 col-medium-6">
+            <div class="content"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-large-3 col-medium-6 col-small-12">
+            <div class="content"></div>
             </div>
+        <div class="col-large-9 col-medium-9 col-small-12">
+            <div class="content"></div>
+        </div>
+    </div>
 
-            <h2>Reserve order</h2>
-            <p>Extend a row with the <em>row-reverse</em> class to reverse the order of the columns. For responsive use <em>row-small-reverse, row-medium-reverse or row-large-reverse</em>.</p>
-
-            <div class="row row-reverse">
-                <div class="col-4">
-                    <div class="box">1</div>
-                </div>
-                <div class="col-4">
-                    <div class="box">2</div>
-                </div>
-                <div class="col-4">
-                    <div class="box">3</div>
-                </div>
+    <div class="row">
+        <div class="col-large-4">
+            <div class="content"></div>
             </div>
+        <div class="col-large-8">
+            <div class="content"></div>
+        </div>
+    </div>
 
-            <h2>Alignment</h2>
-            <p>Extend a row with the <em>row-left</em> class to align the columns to the left. For responsive use <em>row-small-left, row-medium-left or row-large-left</em>.</p>
+    <div class="row">
+        <div class="col-large-6">
+            <div class="content"></div>
+        </div>
+        <div class="col-large-6">
+            <div class="content"></div>
+        </div>
+    </div>
+</div>
 
-            <h3>Align left</h3>
-            <div class="row row-left">
-                <div class="col-2">
-                    
+<pre><code>
+&lt;div class="grid"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-large-12 col-medium-6"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="col-large-3 col-medium-6 col-small-12"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-large-9 col-medium-9 col-small-12"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="col-large-4"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-large-8"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+        &lt;div class="col-large-6"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-large-6"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Subgrids</h3>
+
+<div class="grid">
+    <div class="row">
+        <div class="col-6">
+            <div class="content">
+                <div class="grid">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="content">.col-6</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">.col-6</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="content">.col-3</div>
+                        </div>
+                        <div class="col-9">
+                            <div class="content">.col-9</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-3">
-                    
-                </div>
-                <div class="col-2">
-                    
-                </div>
-            </div>
-
-            <h3>Align right</h3>
-            <p>Extend a row with the <em>row-right</em> class to align the columns to the right. For responsive use <em>row-small-right, row-medium-right or row-large-right</em>.</p>
-
-            <div class="row row-right">
-                <div class="col-2"></div>
-                <div class="col-3"></div>
-                <div class="col-2"></div>
-            </div>
-
-            <h3>Align center</h3>
-            <p>Extend a row with the <em>row-center</em> class to align the columns to the center. For responsive use <em>row-small-right, row-medium-right or row-large-right</em>.</p>
-
-            <div class="row row-center">
-                <div class="col-2"></div>
-                <div class="col-3"></div>
-                <div class="col-2"></div>
-            </div>
-
-            <h3>Space between</h3>
-            <p>Extend a row with the <em>row-space-between</em> class to distribute the columns evenly in the line. The first column will be aligned to the left and the last column to the right. For responsive use <em>row-small-space-between, row-medium-space-between or row-large-space-between</em>.</p>
-
-            <div class="row row-space-between">
-                <div class="col-2"></div>
-                <div class="col-3"></div>
-                <div class="col-2"></div>
-            </div>
-
-            <h3>Space around</h3>
-            <p>Extend a row with the <em>row-space-around</em> class to distribute the columns evenly in the line. The columns will have equal space between them. The space at the begin and the end of the line will be half of the space between the columns. For responsive use <em>row-small-space-between, row-medium-space-between or row-large-space-between</em>.</p>
-
-            <div class="row row-space-around">
-                <div class="col-2"></div>
-                <div class="col-3"></div>
-                <div class="col-2"></div>
             </div>
         </div>
+        <div class="col-6">
+            <div class="content">
+                <div class="grid">
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="content">.col-7</div>
+                        </div>
+                        <div class="col-5">
+                            <div class="content">.col-5</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="content">.col-4</div>
+                        </div>
+                        <div class="col-8">
+                            <div class="content">.col-8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-</body>
+<pre><code>
+&lt;div class="grid"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-6"&gt;
+            &lt;div class="content"&gt;
+                &lt;div class="grid"&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-6"&gt;
+                            &lt;div class="content"&gt;.col-6&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-6"&gt;
+                            &lt;div class="content"&gt;.col-6&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-3"&gt;
+                            &lt;div class="content"&gt;.col-3&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-9"&gt;
+                            &lt;div class="content"&gt;.col-9&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-6"&gt;
+            &lt;div class="content"&gt;
+                &lt;div class="grid"&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-7"&gt;
+                            &lt;div class="content"&gt;.col-7&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-5"&gt;
+                            &lt;div class="content"&gt;.col-5&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row"&gt;
+                        &lt;div class="col-4"&gt;
+                            &lt;div class="content"&gt;.col-4&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-8"&gt;
+                            &lt;div class="content"&gt;.col-8&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Reverse order</h3>
+<p>Extend a row with the <em>row-reverse</em> class to reverse the order of the columns. For responsive use <em>row-small-reverse, row-medium-reverse or row-large-reverse</em>.</p>
+
+<div class="row row-reverse">
+    <div class="col-4">
+        <div class="content">1</div>
+    </div>
+    <div class="col-4">
+        <div class="content">2</div>
+    </div>
+    <div class="col-4">
+        <div class="content">3</div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-reverse"&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;1&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;3&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Alignment</h3>
+
+<h4>Align left</h4>
+<p>Extend a row with the <em>row-left</em> class to align the columns to the left. For responsive use <em>row-small-left, row-medium-left or row-large-left</em>.</p>
+<div class="row row-left">
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+    <div class="col-3">
+        <div class="content"></div>
+    </div>
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-left"&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-3"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Align right</h4>
+<p>Extend a row with the <em>row-right</em> class to align the columns to the right. For responsive use <em>row-small-right, row-medium-right or row-large-right</em>.</p>
+
+<div class="row row-right">
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+    <div class="col-3">
+        <div class="content"></div>
+    </div>
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-right"&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-3"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Align center</h4>
+<p>Extend a row with the <em>row-center</em> class to align the columns to the center. For responsive use <em>row-small-right, row-medium-right or row-large-right</em>.</p>
+
+<div class="row row-center">
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+    <div class="col-3">
+        <div class="content"></div>
+    </div>
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-center"&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-3"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Space between</h4>
+<p>Extend a row with the <em>row-space-between</em> class to distribute the columns evenly in the line. The first column will be aligned to the left and the last column to the right. For responsive use <em>row-small-space-between, row-medium-space-between or row-large-space-between</em>.</p>
+
+<div class="row row-space-between">
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+    <div class="col-3">
+        <div class="content"></div>
+    </div>
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-space-between"&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-3"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Space around</h4>
+<p>Extend a row with the <em>row-space-around</em> class to distribute the columns evenly in the line. The columns will have equal space between them. The space at the begin and the end of the line will be half of the space between the columns. For responsive use <em>row-small-space-between, row-medium-space-between or row-large-space-between</em>.</p>
+
+<div class="row row-space-around">
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+    <div class="col-3">
+        <div class="content"></div>
+    </div>
+    <div class="col-2">
+        <div class="content"></div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-space-around"&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-3"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-2"&gt;
+        &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+        </section>
+    
+        <footer>
+            <section>
+                <i class="fa fa-github"></i> <a href="https://github.com/jeroenoomsNL/the-flex-grid" title="The Flex Grid, CSS grid based on flexbox by Jeroen Ooms">The Flex Grid</a> by <i class="fa fa-twitter"></i> <a href="https://www.twitter.com/jeroenooms" title="Jeroen Ooms at Twitter">Jeroen Ooms</a>.
+            </section>
+        </footer>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-60080969-1','auto');ga('send','pageview');
+        </script>
+    </body>
 </html>
