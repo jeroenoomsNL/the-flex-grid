@@ -4,6 +4,7 @@
 .grid {
   margin: 0 auto;
   max-width: 960px;
+  overflow: hidden;
 }
 
 .row {
@@ -15,17 +16,22 @@
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   margin: 0 -0.5em 0 -0.5em;
-  overflow: auto;
 }
 
 .row > div {
   box-sizing: border-box;
-  padding: 0 0.5em 0 0.5em;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  margin-bottom: 1em;
+  padding: 0 0.5em 1em;
+}
+
+.col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.row:last-child {
+  margin-bottom: -1em;
 }
 
 /*
