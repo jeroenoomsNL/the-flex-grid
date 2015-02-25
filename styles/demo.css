@@ -508,12 +508,12 @@ p {
 }
 
 header {
-  background: #3BAFDA;
+  background: #3bafda;
   padding: 4em 0;
 }
 
 .header-button {
-  background: #34495e;
+  background: #2c3e50;
   border-radius: 0.3em;
   color: #ffffff;
   display: inline-block;
@@ -552,7 +552,7 @@ footer a {
 }
 
 .demo .content {
-  background: #4FC1E9;
+  background: #3bafda;
   border-radius: 0.3em;
   color: #000;
   line-height: 3em;
@@ -562,7 +562,7 @@ footer a {
 
 .demo .content > .grid > .row .content {
   color: #fff;
-  background: #3BAFDA;
+  background: #1c7393;
   opacity: 1;
   border: 0;
 }
