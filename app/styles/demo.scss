@@ -1,3 +1,8 @@
+//
+// Imports
+//
+@import "config";
+
 /*! HTML5 Boilerplate v5.0.0 | MIT License | http://h5bp.com/ */
 
 /*
@@ -123,12 +128,12 @@ p {
 }
 
 header {
-    background: #3BAFDA;
+    background: $primaryColor;
     padding: 4em 0;
 }
 
 .header-button {
-    background: #34495e;
+    background: $secondairyColor;
     border-radius: 0.3em;
     color: #ffffff;
     display: inline-block;
@@ -157,7 +162,7 @@ section {
 }
 
 footer {
-    background: #2c3e50;
+    background: $secondairyColor;
     color: #f1f1f1;
     padding: 2em 0;
 }
@@ -167,7 +172,7 @@ footer a {
 }
 
 .demo .content {
-    background: #4FC1E9;
+    background: $primaryColor;
     border-radius: 0.3em;
     color: #000;
     line-height: 3em;
@@ -177,7 +182,7 @@ footer a {
 
 .demo .content > .grid > .row .content {
     color: #fff;
-    background: #3BAFDA;
+    background: darken($primaryColor, 20%);
     opacity: 1;
     border: 0;
 }
