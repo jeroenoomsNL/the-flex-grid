@@ -12,21 +12,29 @@
 .grid {
     margin: 0 auto;
     max-width: $grid-maxwidth;
+    overflow: hidden;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap;
     margin: 0  -#{$gutter/2} 0 -#{$gutter/2};
-    overflow: auto;
 }
 
 .row > div {
     box-sizing: border-box;
-    padding: 0 $gutter/2 0 $gutter/2;
-    flex: 0 0 100%;
-    margin-bottom: $gutter;
+    padding: 0 $gutter/2 $gutter;
 }
+
+.col {
+    flex: 1 0 auto;
+}
+
+.row:last-child {
+    margin-bottom: -#{$gutter};
+}
+
+
 
 /*
  * Default view
