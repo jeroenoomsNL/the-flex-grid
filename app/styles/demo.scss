@@ -104,6 +104,10 @@ body {
     background: #f5f5f5;
 }
 
+a {
+    color: $primaryColor;
+}
+
 h1, h2 {
     color: #f1f1f1;
     font-family: 'Lato', sans-serif;
@@ -121,10 +125,6 @@ h2 {
 
 h3 {
     margin-top: 3em;
-}
-
-p {
-    max-width: 600px;
 }
 
 header {
