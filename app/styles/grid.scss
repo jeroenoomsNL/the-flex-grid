@@ -21,9 +21,10 @@
     margin: 0  -#{$gutter/2} 0 -#{$gutter/2};
 }
 
-.row > div {
+.row > * {
     box-sizing: border-box;
     padding: 0 $gutter/2 $gutter;
+    flex-basis: 100%;
 }
 
 .col {
