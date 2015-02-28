@@ -69,7 +69,6 @@
         flex-direction: row-reverse;
     }
     
-
     .row#{$viewport}-equal > * {
         display: flex;
     }
@@ -84,4 +83,7 @@
         align-items: flex-end;
     } 
 
+    .hide#{$viewport} {
+        display: none;
+    } 
 }

@@ -46,14 +46,16 @@
 /*
  * Small viewport (mobile)
  */
-@include viewport(small);
+@media (max-width: 767px) {
+ 
+    @include viewport(small);
 
-
+}
 
 /*
  * Medium viewport (tablets)
  */
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 959px) {
 
     @include viewport(medium);
 
