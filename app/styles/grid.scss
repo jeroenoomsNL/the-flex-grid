@@ -27,14 +27,13 @@
     flex-basis: 100%;
 }
 
-.col {
-    flex: 1 0 auto;
-}
-
 .row:last-child {
     margin-bottom: -#{$gutter};
 }
 
+.col {
+    flex: 1 0 auto;
+}
 
 
 /*

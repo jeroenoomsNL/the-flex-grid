@@ -23,12 +23,16 @@
                 <div class="grid">
                     <div class="row">
                         <div class="col-large-9">
-                            <h1>The Flex Grid</h1>
-                            <h2>Lightweight responsive CSS grid using flexbox. Because we can!</h2>
+                            <div class="content">
+                                <h1>The Flex Grid</h1>
+                                <h2>Lightweight responsive CSS grid using flexbox. Because we can!</h2>
+                            </div>
                         </div>
                         <div class="col-large-3">
-                            <a href="https://github.com/jeroenoomsNL/the-flex-grid/archive/master.zip" class="header-button"><i class="fa fa-download"></i> Download</a>
-                            <a href="https://github.com/jeroenoomsNL/the-flex-grid" class="header-button" target="_blank"><i class="fa fa-github"></i> Fork on Github</a>
+                            <div class="content">
+                                <a href="https://github.com/jeroenoomsNL/the-flex-grid/archive/master.zip" class="header-button"><i class="fa fa-download"></i> Download</a>
+                                <a href="https://github.com/jeroenoomsNL/the-flex-grid" class="header-button" target="_blank"><i class="fa fa-github"></i> Fork on Github</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -527,6 +531,168 @@
     &lt;/div&gt;
     &lt;div class="col-2"&gt;
         &lt;div class="content"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Column height &amp; alignment</h3>
+
+<p>Default the columns of The Flex Grid have equal height, but the <em>row-equal</em> allows you to make the child element of all columns the same height. Usefull if you need borders or border-radius. </p>
+
+<div class="row row-equal demo-column-height">
+    <div class="col-4">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="content">
+            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        </div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-equal"&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Individual height align top</h4>
+
+<div class="row row-top demo-column-height">
+    <div class="col-4">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="content">
+            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        </div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-top"&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Individual height align center</h4>
+
+<div class="row row-middle demo-column-height">
+    <div class="col-4">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="content">
+            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        </div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-middle"&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h4>Individual height align bottom</h4>
+
+<div class="row row-bottom demo-column-height">
+    <div class="col-4">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="content">
+            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        </div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="row row-bottom"&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-4"&gt;
+        &lt;div class="content"&gt;
+            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>

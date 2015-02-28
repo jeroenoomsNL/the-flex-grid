@@ -187,6 +187,12 @@ footer a {
     border: 0;
 }
 
+.demo-column-height .content {
+    line-height: 1.5em;
+    padding: 1em;
+    text-align: left;
+}
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:

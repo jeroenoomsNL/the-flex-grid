@@ -68,5 +68,20 @@
     .row#{$viewport}-reverse {
         flex-direction: row-reverse;
     }
+    
+
+    .row#{$viewport}-equal > * {
+        display: flex;
+    }
+
+    .row#{$viewport}-top {
+        align-items: flex-start;
+    }
+    .row#{$viewport}-middle {
+        align-items: center;
+    }
+    .row#{$viewport}-bottom {
+        align-items: flex-end;
+    } 
 
 }
