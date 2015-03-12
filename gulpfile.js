@@ -13,7 +13,6 @@ gulp.task('styles', function () {
             style: 'expanded',
             precision: 10
         }))
-        .pipe($.autoprefixer('last 2 versions'))
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
 });
@@ -36,7 +35,15 @@ gulp.task('html', ['styles'], function () {
         .pipe($.rename({suffix: '.min'}))
         .pipe(gulp.dest(''));
 
-    return merge(demo, grid);
+    var grid_prefixed = gulp.src('.tmp/styles/grid.css')
+        .pipe($.autoprefixer('last 2 versions'))     
+        .pipe($.rename({suffix: '.prefixed'}))
+        .pipe(gulp.dest(''))
+        .pipe($.csso())
+        .pipe($.rename({suffix: '.min'}))
+        .pipe(gulp.dest(''));
+   
+    return merge(demo, grid, grid_prefixed);
 });
 
 gulp.task('clean', function () {
