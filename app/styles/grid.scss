@@ -4,36 +4,53 @@
 @import "config";
 @import "viewport";
 
+$silent-only: false;
 
 
 /*
  * Generic grid styles
  */
-.grid {
+%grid {
     margin: 0 auto;
     max-width: $grid-maxwidth;
     overflow: hidden;
 }
 
-.row {
+%row {
     display: flex;
     flex-wrap: wrap;
     margin: 0  -#{$gutter/2} 0 -#{$gutter/2};
+
+    & > * {
+        box-sizing: border-box;
+        padding: 0 $gutter/2 $gutter;
+        flex-basis: 100%;
+    }
+
+    &:last-child {
+        margin-bottom: -#{$gutter};
+    }
 }
 
-.row > * {
-    box-sizing: border-box;
-    padding: 0 $gutter/2 $gutter;
-    flex-basis: 100%;
-}
-
-.row:last-child {
-    margin-bottom: -#{$gutter};
-}
-
-.col {
+%col {
     flex: 1 0 auto;
 }
+
+@if $silent-only == false {
+
+    .grid {
+        @extend %grid;
+    }
+
+    .row {
+        @extend %row;
+    }
+
+    .col {
+        @extend %col;
+    }
+}
+
 
 
 /*

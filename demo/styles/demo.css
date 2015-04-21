@@ -476,10 +476,14 @@ textarea {
    Browser Upgrade Prompt
    ========================================================================== */
 .browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+  background: #f1c40f;
+  color: #000000;
+  margin: 0;
+  padding: 0.5em 0;
+  text-align: center;
+}
+.browserupgrade a {
+  color: inherit;
 }
 
 /* ==========================================================================

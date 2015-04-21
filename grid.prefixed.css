@@ -17,7 +17,6 @@
           flex-wrap: wrap;
   margin: 0 -0.5em 0 -0.5em;
 }
-
 .row > * {
   box-sizing: border-box;
   padding: 0 0.5em 1em;
@@ -25,7 +24,6 @@
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
 }
-
 .row:last-child {
   margin-bottom: -1em;
 }
