@@ -81,6 +81,3 @@ gulp watch
 [demo page]:http://jeroenoomsnl.github.io/the-flex-grid
 
 
-
-
-
