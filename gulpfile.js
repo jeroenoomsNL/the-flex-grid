@@ -8,7 +8,7 @@ var merge = require('merge-stream');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('app/styles/*.scss')
+    return gulp.src('src/styles/*.scss')
         .pipe($.rubySass({
             style: 'expanded',
             precision: 10
@@ -20,8 +20,8 @@ gulp.task('styles', function () {
 gulp.task('html', ['styles'], function () {
     var cssFilter = $.filter('**/*.css');
 
-    var demo = gulp.src('app/*.html')
-        .pipe($.useref.assets({searchPath: '{.tmp,app}'}))
+    var demo = gulp.src('src/*.html')
+        .pipe($.useref.assets({searchPath: '{.tmp,src}'}))
         .pipe(cssFilter)
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
@@ -47,7 +47,7 @@ gulp.task('html', ['styles'], function () {
 });
 
 gulp.task('clean', function () {
-    return gulp.src(['.tmp', 'demo'], { read: false }).pipe($.clean());
+    return gulp.src(['.tmp', 'demo', 'dist'], { read: false }).pipe($.clean());
 });
 
 gulp.task('build', ['html']);
@@ -60,9 +60,9 @@ gulp.task('connect', function () {
     var connect = require('connect');
     var app = connect()
         .use(require('connect-livereload')({ port: 35729 }))
-        .use(connect.static('app'))
+        .use(connect.static('src'))
         .use(connect.static('.tmp'))
-        .use(connect.directory('app'));
+        .use(connect.directory('src'));
 
     require('http').createServer(app)
         .listen(9000)
@@ -81,11 +81,11 @@ gulp.task('watch', ['connect', 'serve'], function () {
     // watch for changes
 
     gulp.watch([
-        'app/*.html',
+        'src/*.html',
         '.tmp/styles/**/*.css',
     ]).on('change', function (file) {
         server.changed(file.path);
     });
 
-    gulp.watch('app/styles/**/*.scss', ['styles']);
+    gulp.watch('src/styles/**/*.scss', ['styles']);
 });
