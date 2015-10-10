@@ -6,6 +6,16 @@ Vendor prefixes are added for the last 2 versions of the most used webbrowers us
 
 [http://jeroenoomsnl.github.io/the-flex-grid]
 
+## Install
+
+```
+npm install the-flex-grid
+```
+
+```
+bower install the-flex-grid
+```
+
 ## Fluid flexbox grid
 
 ```
@@ -56,7 +66,8 @@ Vendor prefixes are added for the last 2 versions of the most used webbrowers us
 
 See the [demo page] for all the other features like reverse order and alignment.
 
-## Usage
+
+## Usage of this source
 
 After cloning the repository:
 
