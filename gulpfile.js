@@ -29,13 +29,13 @@ gulp.task('html', ['styles'], function () {
         .pipe(gulp.dest('demo'))
         .pipe($.size());
 
-    var grid = gulp.src('.tmp/styles/grid.css')
+    var grid = gulp.src('.tmp/styles/the-flex-grid.css')
         .pipe(gulp.dest('dist'))
         .pipe($.csso())
         .pipe($.rename({suffix: '.min'}))
         .pipe(gulp.dest('dist'));
 
-    var grid_prefixed = gulp.src('.tmp/styles/grid.css')
+    var grid_prefixed = gulp.src('.tmp/styles/the-flex-grid.css')
         .pipe($.autoprefixer('last 2 versions'))     
         .pipe($.rename({suffix: '.prefixed'}))
         .pipe(gulp.dest('dist'))
