@@ -39,7 +39,7 @@
     "subgrids",
     "gutterless"
   ],
-  "license": "Apache 2",
+  "license": "MIT",
   "engines": {
     "node": ">=0.10.0"
   }
