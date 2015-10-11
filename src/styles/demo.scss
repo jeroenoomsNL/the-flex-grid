@@ -183,6 +183,14 @@ footer a {
     line-height: 3em;
     min-height: 3em;
     text-align: center;
+
+    &.orange {
+        background: $orange;
+    }
+
+    &.green {
+        background: $green;
+    }
 }
 
 .demo .content > .grid > .row .content {
