@@ -21,13 +21,13 @@
   margin-bottom: -1em;
 }
 
-.row.gutterless {
+.gutterless > * {
   margin: 0;
 }
-.row.gutterless > * {
+.gutterless > * > * {
   padding: 0;
 }
-.row.gutterless:last-child {
+.gutterless > *:last-child {
   margin-bottom: 0;
 }
 
