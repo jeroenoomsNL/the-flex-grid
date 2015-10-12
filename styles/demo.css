@@ -568,6 +568,12 @@ footer a {
   min-height: 3em;
   text-align: center;
 }
+.demo .content.orange {
+  background: orange;
+}
+.demo .content.green {
+  background: green;
+}
 
 .demo .content > .grid > .row .content {
   color: #fff;

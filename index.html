@@ -11,7 +11,7 @@
 
         <link rel="stylesheet" href="styles/demo.css">
 
-        <link rel="stylesheet" href="styles/grid.css">
+        <link rel="stylesheet" href="styles/the-flex-grid.css">
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -255,6 +255,38 @@
         &lt;/div&gt;
         &lt;div class="col-large-2 col-medium-8 col-small-12"&gt;
             &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3>Gutterless</h3>
+
+<div class="grid gutterless">
+    <div class="row">
+        <div class="col">
+            <div class="content"></div>
+        </div>
+        <div class="col">
+            <div class="content orange"></div>
+        </div>
+        <div class="col">
+            <div class="content green"></div>
+        </div>
+    </div>
+</div>
+
+<pre><code>
+&lt;div class="grid gutterless"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col"&gt;
+            &lt;div class="content orange"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col"&gt;
+            &lt;div class="content green"&gt;&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -539,7 +571,7 @@
 
 <h3>Column height &amp; alignment</h3>
 
-<p>Default the columns of The Flex Grid have equal height, but the <em>row-equal</em> allows you to make the child element of all columns the same height. Usefull if you need borders or border-radius. </p>
+<p>Default the columns of The Flex Grid have equal height, but the <em>row-equal</em> allows you to make the child element of all columns the same height. Usefull if you need borders or border-radius.</p>
 
 <div class="row row-equal demo-column-height">
     <div class="col-4">
