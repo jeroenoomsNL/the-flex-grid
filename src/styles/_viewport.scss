@@ -48,6 +48,18 @@
         flex-basis: 100%;
     }
 
+    div.col#{$viewport}-top {
+        align-self: flex-start;
+    }
+
+    div.col#{$viewport}-bottom {
+        align-self: flex-end;
+    }
+
+    div.col#{$viewport}-middle {
+        align-self: center;
+    }
+
 
     .row#{$viewport}-left {
       justify-content: flex-start;
