@@ -28,13 +28,13 @@
   margin-bottom: -1em;
 }
 
-.row.gutterless {
+.gutterless > * {
   margin: 0;
 }
-.row.gutterless > * {
+.gutterless > * > * {
   padding: 0;
 }
-.row.gutterless:last-child {
+.gutterless > *:last-child {
   margin-bottom: 0;
 }
 
@@ -118,6 +118,24 @@ div.col-12 {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
+}
+
+div.col-top {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+
+div.col-bottom {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+
+div.col-middle {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
 }
 
 .row-left {
@@ -270,6 +288,24 @@ div.col-12 {
             flex-basis: 100%;
   }
 
+  div.col-small-top {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+  }
+
+  div.col-small-bottom {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+  }
+
+  div.col-small-middle {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+
   .row-small-left {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -420,6 +456,24 @@ div.col-12 {
             flex-basis: 100%;
   }
 
+  div.col-medium-top {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+  }
+
+  div.col-medium-bottom {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+  }
+
+  div.col-medium-middle {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+  }
+
   .row-medium-left {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -568,6 +622,24 @@ div.col-12 {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
+  }
+
+  div.col-large-top {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+  }
+
+  div.col-large-bottom {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+  }
+
+  div.col-large-middle {
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
   }
 
   .row-large-left {
