@@ -86,6 +86,18 @@ div.col-12 {
   flex-basis: 100%;
 }
 
+div.col-top {
+  align-self: flex-start;
+}
+
+div.col-bottom {
+  align-self: flex-end;
+}
+
+div.col-middle {
+  align-self: center;
+}
+
 .row-left {
   justify-content: flex-start;
 }
@@ -180,6 +192,18 @@ div.col-12 {
 
   div.col-small-12 {
     flex-basis: 100%;
+  }
+
+  div.col-small-top {
+    align-self: flex-start;
+  }
+
+  div.col-small-bottom {
+    align-self: flex-end;
+  }
+
+  div.col-small-middle {
+    align-self: center;
   }
 
   .row-small-left {
@@ -278,6 +302,18 @@ div.col-12 {
     flex-basis: 100%;
   }
 
+  div.col-medium-top {
+    align-self: flex-start;
+  }
+
+  div.col-medium-bottom {
+    align-self: flex-end;
+  }
+
+  div.col-medium-middle {
+    align-self: center;
+  }
+
   .row-medium-left {
     justify-content: flex-start;
   }
@@ -372,6 +408,18 @@ div.col-12 {
 
   div.col-large-12 {
     flex-basis: 100%;
+  }
+
+  div.col-large-top {
+    align-self: flex-start;
+  }
+
+  div.col-large-bottom {
+    align-self: flex-end;
+  }
+
+  div.col-large-middle {
+    align-self: center;
   }
 
   .row-large-left {
