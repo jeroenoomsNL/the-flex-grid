@@ -19,46 +19,50 @@ bower install the-flex-grid
 ## Fluid flexbox grid
 
 ```
-<div class="row">
-    <div class="col-12"></div>
-</div>
+<div class="grid">
+    <div class="row">
+        <div class="col-12"></div>
+    </div>
 
-<div class="row">
-    <div class="col-3"></div>
-    <div class="col-9"></div>
-</div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-9"></div>
+    </div>
 
-<div class="row">
-    <div class="col-4"></div>
-    <div class="col-8"></div>
-</div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8"></div>
+    </div>
 
-<div class="row">
-    <div class="col-6"></div>
-    <div class="col-6"></div>
+    <div class="row">
+        <div class="col-6"></div>
+        <div class="col-6"></div>
+    </div>
 </div>
 ```
 
 ## Responsive flexbox grid
 
 ```
-<div class="row">
-    <div class="col-large-12 col-medium-6"></div>
-</div>
+<div class="grid">
+    <div class="row">
+        <div class="col-large-12 col-medium-6"></div>
+    </div>
 
-<div class="row">
-    <div class="col-large-3 col-medium-6 col-small-12"></div>
-    <div class="col-large-9 col-medium-9 col-small-12"></div>
-</div>
+    <div class="row">
+        <div class="col-large-3 col-medium-6 col-small-12"></div>
+        <div class="col-large-9 col-medium-9 col-small-12"></div>
+    </div>
 
-<div class="row">
-    <div class="col-large-4"></div>
-    <div class="col-large-8"></div>
-</div>
+    <div class="row">
+        <div class="col-large-4"></div>
+        <div class="col-large-8"></div>
+    </div>
 
-<div class="row">
-    <div class="col-large-6"></div>
-    <div class="col-large-6"></div>
+    <div class="row">
+        <div class="col-large-6"></div>
+        <div class="col-large-6"></div>
+    </div>
 </div>
 ```
 
