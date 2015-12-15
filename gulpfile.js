@@ -8,24 +8,15 @@ var merge = require('merge-stream');
 var $ = require('gulp-load-plugins')();
 
 gulp.task('styles', function () {
-    return gulp.src('src/styles/*.scss')
-        .pipe($.rubySass({
-            style: 'expanded',
-            precision: 10
-        }))
+    return $.rubySass('src/styles/*.scss', {precision: 10, style: 'expanded'})
+        .on('error', $.rubySass.logError)
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
 });
 
 gulp.task('html', ['styles'], function () {
-    var cssFilter = $.filter('**/*.css');
-
     var demo = gulp.src('src/*.html')
-        .pipe($.useref.assets({searchPath: '{.tmp,src}'}))
-        .pipe(cssFilter)
-        .pipe(cssFilter.restore())
-        .pipe($.useref.restore())
-        .pipe($.useref())
+        .pipe($.useref({searchPath: '{.tmp,src}'}))
         .pipe(gulp.dest('demo'))
         .pipe($.size());
 
@@ -58,11 +49,11 @@ gulp.task('default', ['clean'], function () {
 
 gulp.task('connect', function () {
     var connect = require('connect');
+    var serveStatic = require('serve-static');
     var app = connect()
         .use(require('connect-livereload')({ port: 35729 }))
-        .use(connect.static('src'))
-        .use(connect.static('.tmp'))
-        .use(connect.directory('src'));
+        .use(serveStatic('src'))
+        .use(serveStatic('.tmp'))
 
     require('http').createServer(app)
         .listen(9000)
@@ -79,7 +70,6 @@ gulp.task('watch', ['connect', 'serve'], function () {
     var server = $.livereload();
 
     // watch for changes
-
     gulp.watch([
         'src/*.html',
         '.tmp/styles/**/*.css',
@@ -89,3 +79,9 @@ gulp.task('watch', ['connect', 'serve'], function () {
 
     gulp.watch('src/styles/**/*.scss', ['styles']);
 });
+
+gulp.task('deploy', function() {
+  return gulp.src('./demo/**/*')
+    .pipe($.ghPages());
+});
+
