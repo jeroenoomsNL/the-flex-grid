@@ -23,7 +23,8 @@
     "merge-stream": "^1.0.0",
     "opn": "^3.0.3",
     "serve-static": "*",
-    "wiredep": "^3.0.0"
+    "wiredep": "^3.0.0",
+    "yargs": "^3.31.0"
   },
   "repository": {
     "type": "git",

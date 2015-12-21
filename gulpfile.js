@@ -1,8 +1,8 @@
 'use strict';
-// generated on 2014-11-29 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp');
 var merge = require('merge-stream');
+var argv = require('yargs').argv;
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -68,6 +68,7 @@ gulp.task('serve', ['connect', 'styles'], function () {
 
 gulp.task('watch', ['connect', 'serve'], function () {
     var server = $.livereload();
+    server.listen();
 
     // watch for changes
     gulp.watch([
@@ -81,7 +82,13 @@ gulp.task('watch', ['connect', 'serve'], function () {
 });
 
 gulp.task('deploy', function() {
-  return gulp.src('./demo/**/*')
-    .pipe($.ghPages());
+
+    argv.message = argv.m || argv.message;
+
+    var options = {};
+    options.message = argv.message || 'Update '+ new Date();
+
+    return gulp.src('./demo/**/*')
+        .pipe($.ghPages(options));
 });
 

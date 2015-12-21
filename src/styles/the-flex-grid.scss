@@ -6,7 +6,6 @@
 
 $silent-only: false;
 
-
 /*
  * Generic grid styles
  */
@@ -44,8 +43,6 @@ $silent-only: false;
             margin-bottom: 0;
         }
     }
-    
-    
 }
 
 %col {
@@ -53,7 +50,6 @@ $silent-only: false;
 }
 
 @if $silent-only == false {
-
     .grid {
         @extend %grid;
     }
@@ -84,18 +80,14 @@ $silent-only: false;
  * Small viewport (mobile)
  */
 @media (max-width: 767px) {
- 
     @include viewport(small);
-
 }
 
 /*
  * Medium viewport (tablets)
  */
 @media (min-width: 768px) and (max-width: 959px) {
-
     @include viewport(medium);
-
 }
 
 
@@ -104,7 +96,5 @@ $silent-only: false;
  * Large viewport (desktop)
  */
 @media (min-width: 960px) {
-
     @include viewport(large);
-
 }
