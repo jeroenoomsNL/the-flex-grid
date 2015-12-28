@@ -1,4 +1,5 @@
 node_modules
+dist/demo
 .tmp
 .publish
 .sass-cache
