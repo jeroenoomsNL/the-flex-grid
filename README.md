@@ -1,6 +1,6 @@
 # The Flex Grid
 
-The Flex Grid is an lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs. The max-width of the grid and the width of the gutter are easily customizable by the globals in the SASS file.
+The Flex Grid is a lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs. The max-width of the grid and the width of the gutter are easily customizable by the globals in the SASS file.
 
 Vendor prefixes are added for the last 2 versions of the most used webbrowers using autoprefixer. This can be changed in gulpfile.js
 
