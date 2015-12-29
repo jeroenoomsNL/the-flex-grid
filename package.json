@@ -5,7 +5,7 @@
   "description": "The Flex Grid is a lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs.",
   "main": "dist/the-flex-grid.css",
   "dependencies": {
-    "initialize-css": "^0.2.0"
+    "initialize-css": "^0.2.1"
   },
   "devDependencies": {
     "browser-sync": "^2.10.1",

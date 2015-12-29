@@ -1,0 +1,17 @@
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-small) { @content; }
+  }
+ 
+  @else if $breakpoint == md {
+    @media (min-width: $breakpoint-medium) { @content; }
+  }
+ 
+  @else if $breakpoint == lg {
+    @media (min-width: $breakpoint-large) { @content; }
+  }
+ 
+  @else {
+    @warn "The breakpoint mixin only supports 'sm', 'md' and 'lg'";
+  }
+}

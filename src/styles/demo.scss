@@ -1,8 +1,64 @@
 //
 // Imports
 //
-@import "config";
+
+// config
+$max-width: 960px;
+
+// breakpoints use: @include breakpoint(xs);
+$breakpoint-small: 767px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 960px;
+
+// colors
+$color-background: #f5f5f5;
+$color-accent: #3bafda;
+$color-accent-dark: #2c3e50;
+$color-text: #222;
+$color-text-accent: #f1f1f1;
+$color-orange: orange;
+$color-green: green;
+
+// initilize overwrites
+$initialize-block-margins: 0 0 0.75em;
+$initialize-color: $color-text;
+$initialize-heading-color: $color-accent-dark;
+$initialize-heading-font-family: 'Lato', sans-serif;
+$initialize-heading-margins: 1em 0 0.75em;
+
+// import dependencies
 @import "initialize-css/dist/initialize";
+@import "helpers/breakpoints";
+
+// extends
+%wrapper {
+    padding: 0 2em;
+    margin: 0 auto;
+    max-width: $max-width;
+    position: relative;
+}
+
+// demo page styling
+body {
+    background: $color-background;
+}
+
+a {
+    color: $color-accent;
+}
+
+code, pre {
+    background: white;
+    border-radius: 0.3em;
+    margin-bottom: 1em;
+    padding: 1em 2em;
+}
+
+code {
+    display: inline-block;
+    margin: 1em 0;
+    padding: 0.75em 1.5em;
+}
 
 .browserupgrade {
     background: #f1c40f;
@@ -16,80 +72,108 @@
     }
 }
 
-body {
-    background: #f5f5f5;
-    color: #222;
-}
-
-a {
-    color: $primaryColor;
-}
-
-h1, h2 {
-    color: #f1f1f1;
-    font-family: 'Lato', sans-serif;
-    margin: 0;
-}
-
-h1 {
-    font-size: 3em;
-    margin-bottom: 0.2em;
-}
-
-h2 {
-    font-weight: normal;
-}
-
-h3 {
-    margin-top: 3em;
-}
-
-header {
-    background: $primaryColor;
-    padding: 4em 0;
-}
-
-.header-button {
-    background: $secondairyColor;
-    border-radius: 0.3em;
-    color: #ffffff;
-    display: inline-block;
-    text-decoration: none;
-    padding: 1em;
-    text-align: center;
-    width: 10em;
-}
-
-.header-button:first-child {
-    margin-bottom: 2em;
-}
-
-pre {
-    background: #fff;
-    border-radius: 0.3em;
-    font-size: 0.8em;
-    padding: 1em 2em;
-}
-
-section {
-    padding: 0 2em;
-    margin: 0 auto;
-    max-width: 960px;
-    position: relative;
-}
-
-footer {
-    background: $secondairyColor;
-    color: #f1f1f1;
+.header {
+    background: $color-accent;
     padding: 2em 0;
+
+    @include breakpoint(md) {
+        padding: 4em 0;
+    }
+
+    &-wrapper {
+        @extend %wrapper;
+        display: flex;
+        justify-content: space-between;
+
+        @include breakpoint(sm) {
+            flex-wrap: wrap;
+        }
+    }
+
+    h1, h2 {
+        color: #f1f1f1;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin-top: 0;
+
+        @include breakpoint(md) {
+            font-size: 3em;
+        }
+    }
+
+    h2 {
+        font-weight: normal;
+
+        @include breakpoint(sm) {
+            font-size: 1.3em;
+        }
+    }
+
+    .header-content {
+        padding-right: 4em;
+
+        @include breakpoint(sm) {
+            margin-bottom: 2em;
+        }
+    }
+
+    .header-buttons {
+
+        .header-button {
+            background: $color-accent-dark;
+            border-radius: 0.3em;
+            color: white;
+            display: block;
+            text-decoration: none;
+            padding: 1em;
+            text-align: center;
+            width: 10em;
+
+            &:hover {
+                background: darken($color-accent-dark, 10);
+            }
+        }
+
+        .header-button:first-child {
+            margin-bottom: 2em;
+        }
+    }
 }
 
-footer a {
-    color: #f1f1f1;
+.main {
+    @extend %wrapper;
+    padding-top: 1em;
+
+    .intro {
+        font-size: 1.2em;
+        margin-bottom: 2em;
+
+        @include breakpoint(lg) {
+            max-width: 80%;
+        }
+    }
 }
+
+.footer {
+    background: $color-accent-dark;
+    color: $color-text-accent;
+    margin-top: 2em;
+    padding: 2em 0;
+
+    &-wrapper {
+        @extend %wrapper;
+    }
+
+    a {
+        color: $color-text-accent;
+    }
+}
+
 
 .demo .content {
-    background: $primaryColor;
+    background: $color-accent;
     border-radius: 0.3em;
     color: #000;
     line-height: 3em;
@@ -97,17 +181,17 @@ footer a {
     text-align: center;
 
     &.orange {
-        background: $orange;
+        background: $color-orange;
     }
 
     &.green {
-        background: $green;
+        background: $color-green;
     }
 }
 
 .demo .content > .grid > .row .content {
     color: #fff;
-    background: darken($primaryColor, 20%);
+    background: darken($color-accent, 20%);
     opacity: 1;
     border: 0;
 }
@@ -118,79 +202,3 @@ footer a {
     text-align: left;
 }
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
