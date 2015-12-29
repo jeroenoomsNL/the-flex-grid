@@ -6,6 +6,7 @@
  * Normalize.css: http://github.com/necolas/normalize.css
  */
 html {
+  color: #222;
   box-sizing: border-box;
   font-family: sans-serif;
   line-height: 1.4;
@@ -262,6 +263,44 @@ textarea {
   resize: vertical;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #2c3e50;
+  margin: 1em 0 0.75em;
+  font-family: "Lato", sans-serif;
+}
+
+p, table, ul, ol {
+  margin: 0 0 0.75em;
+}
+
+.header-wrapper, .main, .footer-wrapper {
+  padding: 0 2em;
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+a {
+  color: #3bafda;
+}
+
+code, pre {
+  background: white;
+  border-radius: 0.3em;
+  margin-bottom: 1em;
+  padding: 1em 2em;
+}
+
+code {
+  display: inline-block;
+  margin: 1em 0;
+  padding: 0.75em 1.5em;
+}
+
 .browserupgrade {
   background: #f1c40f;
   color: #000000;
@@ -273,75 +312,89 @@ textarea {
   color: inherit;
 }
 
-body {
-  background: #f5f5f5;
-  color: #222;
+.header {
+  background: #3bafda;
+  padding: 2em 0;
 }
-
-a {
-  color: #3bafda;
+@media (min-width: 768px) {
+  .header {
+    padding: 4em 0;
+  }
 }
-
-h1, h2 {
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .header-wrapper {
+    flex-wrap: wrap;
+  }
+}
+.header h1, .header h2 {
   color: #f1f1f1;
-  font-family: 'Lato', sans-serif;
-  margin: 0;
 }
-
-h1 {
-  font-size: 3em;
-  margin-bottom: 0.2em;
+.header h1 {
+  font-size: 2em;
+  margin-top: 0;
 }
-
-h2 {
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 3em;
+  }
+}
+.header h2 {
   font-weight: normal;
 }
-
-h3 {
-  margin-top: 3em;
+@media (max-width: 767px) {
+  .header h2 {
+    font-size: 1.3em;
+  }
 }
-
-header {
-  background: #3bafda;
-  padding: 4em 0;
+.header .header-content {
+  padding-right: 4em;
 }
-
-.header-button {
+@media (max-width: 767px) {
+  .header .header-content {
+    margin-bottom: 2em;
+  }
+}
+.header .header-buttons .header-button {
   background: #2c3e50;
   border-radius: 0.3em;
-  color: #ffffff;
-  display: inline-block;
+  color: white;
+  display: block;
   text-decoration: none;
   padding: 1em;
   text-align: center;
   width: 10em;
 }
-
-.header-button:first-child {
+.header .header-buttons .header-button:hover {
+  background: #1a252f;
+}
+.header .header-buttons .header-button:first-child {
   margin-bottom: 2em;
 }
 
-pre {
-  background: #fff;
-  border-radius: 0.3em;
-  font-size: 0.8em;
-  padding: 1em 2em;
+.main {
+  padding-top: 1em;
+}
+.main .intro {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+@media (min-width: 960px) {
+  .main .intro {
+    max-width: 80%;
+  }
 }
 
-section {
-  padding: 0 2em;
-  margin: 0 auto;
-  max-width: 960px;
-  position: relative;
-}
-
-footer {
+.footer {
   background: #2c3e50;
   color: #f1f1f1;
+  margin-top: 2em;
   padding: 2em 0;
 }
-
-footer a {
+.footer a {
   color: #f1f1f1;
 }
 
@@ -371,79 +424,4 @@ footer a {
   line-height: 1.5em;
   padding: 1em;
   text-align: left;
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    /* Black prints faster:
-       http://www.sanbeiji.com/archives/953 */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  img {
-    max-width: 100% !important;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
 }

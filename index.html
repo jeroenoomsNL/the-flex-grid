@@ -19,30 +19,21 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and your life.</p>
         <![endif]-->
 
-        <header>
-            <section>
-                <div class="grid">
-                    <div class="row">
-                        <div class="col-large-9">
-                            <div class="content">
-                                <h1>The Flex Grid
-                                    <iframe src="https://ghbtns.com/github-btn.html?user=jeroenoomsNL&amp;repo=the-flex-grid&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px" align="right" style="margin-top: 0.4em;"></iframe>
-                                </h1>
-                                <h2>Lightweight responsive CSS grid using flexbox. Because we can!</h2>
-                            </div>
-                        </div>
-                        <div class="col-large-3">
-                            <div class="content">
-                                <a href="https://github.com/jeroenoomsNL/the-flex-grid/archive/master.zip" class="header-button"><i class="fa fa-download"></i> Download</a>
-                                <a href="https://github.com/jeroenoomsNL/the-flex-grid" class="header-button" target="_blank"><i class="fa fa-github"></i> Fork on Github</a>
-                            </div>
-                        </div>
-                    </div>
+        <header class="header">
+            <section class="header-wrapper">
+                <div class="header-content">
+                    <h1>The Flex Grid</h1>
+                    <h2>Lightweight responsive CSS grid using flexbox. Because we can!</h2>
+                </div>
+                        
+                <div class="header-buttons">
+                    <a href="https://github.com/jeroenoomsNL/the-flex-grid/archive/master.zip" class="header-button" title="Download The Flex Grid"><i class="fa fa-download"></i> Download</a>
+                    <a href="https://github.com/jeroenoomsNL/the-flex-grid" class="header-button" target="_blank" title="Fork The Flex Grid on Github"><i class="fa fa-github"></i> Fork on Github</a>
                 </div>
             </section>
         </header>
 
-        <section class="demo">
+        <main class="main demo">
 <p>The Flex Grid is a lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers like Chrome, Firefox, Safari &amp; IE10+. No support for dinosaurs. Feel free to <a href="https://github.com/jeroenoomsNL/the-flex-grid/archive/master.zip" title="Download The Flex Grid, based on CSS flexbox">download</a> the grid or <a href="https://github.com/jeroenoomsNL/the-flex-grid" title="Fork The Flex Grid on Github, based on CSS flexbox">fork</a> the project on Github.</p>
 
 <h3>Fluid grid</h3>
@@ -82,7 +73,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="grid"&gt;
     &lt;div class="row"&gt;
         &lt;div class="col-12"&gt;
@@ -117,7 +108,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h3>Responsive grid</h3>
 
@@ -156,7 +147,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="grid"&gt;
     &lt;div class="row"&gt;
         &lt;div class="col-large-12 col-medium-6"&gt;
@@ -191,7 +182,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h3>Smart columns</h3>
 
@@ -239,7 +230,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="grid"&gt;
     &lt;div class="row"&gt;
         &lt;div class="col-large-4 col-medium-4 col-small-4"&gt;
@@ -283,7 +274,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h3>Gutterless</h3>
 
@@ -301,7 +292,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="grid gutterless"&gt;
     &lt;div class="row"&gt;
         &lt;div class="col"&gt;
@@ -315,7 +306,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h3>Subgrids</h3>
 
@@ -368,7 +359,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="grid"&gt;
     &lt;div class="row"&gt;
         &lt;div class="col-6"&gt;
@@ -417,7 +408,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h3>Reverse order</h3>
 <p>Extend a row with the <em>row-reverse</em> class to reverse the order of the columns. For responsive use <em>row-small-reverse, row-medium-reverse or row-large-reverse</em>.</p>
@@ -434,7 +425,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-reverse"&gt;
     &lt;div class="col-4"&gt;
         &lt;div class="content"&gt;1&lt;/div&gt;
@@ -446,7 +437,7 @@
         &lt;div class="content"&gt;3&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h3>Alignment</h3>
 
@@ -464,7 +455,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-left"&gt;
     &lt;div class="col-2"&gt;
         &lt;div class="content"&gt;&lt;/div&gt;
@@ -476,7 +467,7 @@
         &lt;div class="content"&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h4>Align right</h4>
 <p>Extend a row with the <em>row-right</em> class to align the columns to the right. For responsive use <em>row-small-right, row-medium-right or row-large-right</em>.</p>
@@ -493,7 +484,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-right"&gt;
     &lt;div class="col-2"&gt;
         &lt;div class="content"&gt;&lt;/div&gt;
@@ -505,7 +496,7 @@
         &lt;div class="content"&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h4>Align center</h4>
 <p>Extend a row with the <em>row-center</em> class to align the columns to the center. For responsive use <em>row-small-right, row-medium-right or row-large-right</em>.</p>
@@ -522,7 +513,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-center"&gt;
     &lt;div class="col-2"&gt;
         &lt;div class="content"&gt;&lt;/div&gt;
@@ -534,7 +525,7 @@
         &lt;div class="content"&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h4>Space between</h4>
 <p>Extend a row with the <em>row-space-between</em> class to distribute the columns evenly in the line. The first column will be aligned to the left and the last column to the right. For responsive use <em>row-small-space-between, row-medium-space-between or row-large-space-between</em>.</p>
@@ -551,7 +542,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-space-between"&gt;
     &lt;div class="col-2"&gt;
         &lt;div class="content"&gt;&lt;/div&gt;
@@ -563,7 +554,7 @@
         &lt;div class="content"&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h4>Space around</h4>
 <p>Extend a row with the <em>row-space-around</em> class to distribute the columns evenly in the line. The columns will have equal space between them. The space at the begin and the end of the line will be half of the space between the columns. For responsive use <em>row-small-space-between, row-medium-space-between or row-large-space-between</em>.</p>
@@ -580,7 +571,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-space-around"&gt;
     &lt;div class="col-2"&gt;
         &lt;div class="content"&gt;&lt;/div&gt;
@@ -592,7 +583,7 @@
         &lt;div class="content"&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h3>Column height &amp; alignment</h3>
 
@@ -616,7 +607,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-equal"&gt;
     &lt;div class="col-4"&gt;
         &lt;div class="content"&gt;
@@ -634,7 +625,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h4>Individual height align top</h4>
 
@@ -656,7 +647,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-top"&gt;
     &lt;div class="col-4"&gt;
         &lt;div class="content"&gt;
@@ -674,7 +665,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h4>Individual height align center</h4>
 
@@ -696,7 +687,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-middle"&gt;
     &lt;div class="col-4"&gt;
         &lt;div class="content"&gt;
@@ -714,7 +705,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h4>Individual height align bottom</h4>
 
@@ -736,7 +727,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-bottom"&gt;
     &lt;div class="col-4"&gt;
         &lt;div class="content"&gt;
@@ -754,7 +745,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h4>Align single column</h4>
 <p>In case of <em>row-top</em>, <em>row-middle</em> or <em>row-bottom</em> you can overwrite the vertical alignment of a single column.</p>
@@ -782,7 +773,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-top"&gt;
     &lt;div class="col-3 col-bottom"&gt;
         &lt;div class="content"&gt;
@@ -805,7 +796,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
 <h3>Hide column for current breakpoint</h3>
 
@@ -827,7 +818,7 @@
     </div>
 </div>
 
-<pre><code>
+<pre>
 &lt;div class="row row-bottom"&gt;
     &lt;div class="col-4 hide-small"&gt;
         &lt;div class="content"&gt;
@@ -845,13 +836,13 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+</pre>
 
-        </section>
+        </main>
     
-        <footer>
-            <section>
-                <i class="fa fa-github"></i> <a href="https://github.com/jeroenoomsNL/the-flex-grid" title="The Flex Grid, CSS grid based on flexbox by Jeroen Ooms">The Flex Grid</a> by <a href="http://jeroenooms.nl" title="Website Jeroen Ooms">Jeroen Ooms</a> <a href="https://www.twitter.com/jeroenooms" title="Jeroen Ooms at Twitter"><i class="fa fa-twitter"></i></a>
+        <footer class="footer">
+            <section class="footer-wrapper">
+                This page is based on <a href="https://github.com/jeroenoomsNL/github-project-starter" title="Github Project Starter by Jeroen Ooms">Github Project Starter</a> by <a href="http://jeroenooms.nl" title="Website Jeroen Ooms">Jeroen Ooms</a> <a href="https://github.com/jeroenoomsNL" title="Github account Jeroen Ooms"><i class="fa fa-github"></i></a> <a href="http://twitter.com/jeroenooms" title="Twitter account Jeroen Ooms"><i class="fa fa-twitter"></i></a>
             </section>
         </footer>
 
