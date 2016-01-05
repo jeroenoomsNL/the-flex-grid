@@ -1,5 +1,7 @@
 node_modules
+dist/demo
 .tmp
+.publish
 .sass-cache
 app/bower_components
 node_modules

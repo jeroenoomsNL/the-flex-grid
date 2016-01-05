@@ -1,11 +1,110 @@
 //
-// Imports
+// Config
 //
-@import "config";
-@import "viewport";
+$gutter: 1em !default;
+$grid-maxwidth: 960px !default;
+$silent-only: false !default;
 
-$silent-only: false;
+//
+// Viewport mixin
+//
+@mixin viewport($viewport) {
 
+    @if $viewport != default {
+        $viewport: -#{$viewport};
+    }
+
+    @if $viewport == default {
+        $viewport: '';
+    }
+
+    div.col#{$viewport}-1 {
+        flex-basis: 8.3333333333%;
+    }
+    div.col#{$viewport}-2 {
+        flex-basis: 16.666666666%;
+    }
+    div.col#{$viewport}-3 {
+        flex-basis: 25%;
+    }
+    div.col#{$viewport}-4 {
+        flex-basis: 33.333333333%;
+    }
+    div.col#{$viewport}-5 {
+        flex-basis: 41.666666666%;
+    }
+    div.col#{$viewport}-6 {
+        flex-basis: 50%;
+    }
+    div.col#{$viewport}-7 {
+        flex-basis: 58.333333333%;
+    }
+    div.col#{$viewport}-8 {
+        flex-basis: 66.666666666%;
+    }
+    div.col#{$viewport}-9 {
+        flex-basis: 75%;
+    }
+    div.col#{$viewport}-10 {
+        flex-basis: 83.333333333%;
+    }
+    div.col#{$viewport}-11 {
+        flex-basis: 91.666666666%;
+    }
+    div.col#{$viewport}-12 {
+        flex-basis: 100%;
+    }
+
+    div.col#{$viewport}-top {
+        align-self: flex-start;
+    }
+
+    div.col#{$viewport}-bottom {
+        align-self: flex-end;
+    }
+
+    div.col#{$viewport}-middle {
+        align-self: center;
+    }
+
+    .row#{$viewport}-left {
+      justify-content: flex-start;
+    }
+    .row#{$viewport}-right {
+      justify-content: flex-end;
+    }
+    .row#{$viewport}-center {
+      justify-content: center;
+    }
+    .row#{$viewport}-space-between {
+      justify-content: space-between;
+    }
+    .row#{$viewport}-space-around {
+      justify-content: space-around;
+    }
+
+    .row#{$viewport}-reverse {
+        flex-direction: row-reverse;
+    }
+    
+    .row#{$viewport}-equal > * {
+        display: flex;
+    }
+
+    .row#{$viewport}-top {
+        align-items: flex-start;
+    }
+    .row#{$viewport}-middle {
+        align-items: center;
+    }
+    .row#{$viewport}-bottom {
+        align-items: flex-end;
+    } 
+
+    .hide#{$viewport} {
+        display: none;
+    } 
+}
 
 /*
  * Generic grid styles
@@ -44,8 +143,6 @@ $silent-only: false;
             margin-bottom: 0;
         }
     }
-    
-    
 }
 
 %col {
@@ -53,7 +150,6 @@ $silent-only: false;
 }
 
 @if $silent-only == false {
-
     .grid {
         @extend %grid;
     }
@@ -71,40 +167,28 @@ $silent-only: false;
     }
 }
 
-
-
 /*
  * Default view
  */
 @include viewport(default);
 
-
-
 /*
  * Small viewport (mobile)
  */
 @media (max-width: 767px) {
- 
     @include viewport(small);
-
 }
 
 /*
  * Medium viewport (tablets)
  */
 @media (min-width: 768px) and (max-width: 959px) {
-
     @include viewport(medium);
-
 }
-
-
 
 /*
  * Large viewport (desktop)
  */
 @media (min-width: 960px) {
-
     @include viewport(large);
-
 }

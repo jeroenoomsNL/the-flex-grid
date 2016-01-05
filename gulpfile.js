@@ -1,87 +1,113 @@
 'use strict';
-// generated on 2014-11-29 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp');
-var merge = require('merge-stream');
-
-// load plugins
 var $ = require('gulp-load-plugins')();
+var rimraf = require('rimraf');
+var browserSync = require('browser-sync');
+var merge = require('merge-stream');
+var params = $.util.env;
+
+var config = {
+    src: {
+        base: 'src',
+        styles: 'src/styles'
+    },
+    dist: {
+        base: 'dist',
+    },
+    demo: {
+        base: 'dist/demo',
+        scripts: 'dist/demo/scripts',
+        styles: 'dist/demo/styles'
+    },
+    autoprefixer: ['last 2 versions', 'Explorer >= 10', 'Firefox >= 25']
+};
 
 gulp.task('styles', function () {
-    return $.rubySass('src/styles/*.scss', {precision: 10, style: 'expanded'})
-        .on('error', $.rubySass.logError)
-        .pipe(gulp.dest('.tmp/styles'))
-        .pipe($.size());
-});
 
-gulp.task('html', ['styles'], function () {
-    var demo = gulp.src('src/*.html')
-        .pipe($.useref({searchPath: '{.tmp,src}'}))
-        .pipe(gulp.dest('demo'))
-        .pipe($.size());
+    var demo = $.rubySass(config.src.styles + '/**/*.scss', {
+            precision: 10,
+            sourcemap: false,
+            style: params.production ? 'compressed' : 'expanded',
+            loadPath: ['node_modules']
+        })
+        .on('error', function(error) {
+            console.log(error);
+        })
+        .pipe($.plumber())
+        .pipe(gulp.dest(config.demo.styles));
 
-    var grid = gulp.src('.tmp/styles/the-flex-grid.css')
-        .pipe(gulp.dest('dist'))
-        .pipe($.csso())
+    var grid = $.rubySass(config.src.styles + '/the-flex-grid.scss', {
+            precision: 10,
+            sourcemap: false,
+            style: params.production ? 'compressed' : 'expanded',
+            loadPath: ['node_modules']
+        })
+        .on('error', function(error) {
+            console.log(error);
+        })
+        .pipe($.plumber())
+        .pipe(gulp.dest(config.dist.base))
+        .pipe($.cssmin())
         .pipe($.rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest(config.dist.base));
 
-    var grid_prefixed = gulp.src('.tmp/styles/the-flex-grid.css')
-        .pipe($.autoprefixer('last 2 versions'))     
+    var grid_prefixed = $.rubySass(config.src.styles + '/the-flex-grid.scss', {
+            precision: 10,
+            sourcemap: false,
+            style: params.production ? 'compressed' : 'expanded',
+            loadPath: ['node_modules']
+        })
+        .on('error', function(error) {
+            console.log(error);
+        })
+        .pipe($.plumber())
+        .pipe($.autoprefixer(config.autoprefixer))
         .pipe($.rename({suffix: '.prefixed'}))
-        .pipe(gulp.dest('dist'))
-        .pipe($.csso())
+        .pipe(gulp.dest(config.dist.base))
+        .pipe($.cssmin())
         .pipe($.rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist'));
-   
+        .pipe(gulp.dest(config.dist.base))
+        .pipe($.size({title: 'styles'}));
+
     return merge(demo, grid, grid_prefixed);
 });
 
-gulp.task('clean', function () {
-    return gulp.src(['.tmp', 'demo', 'dist'], { read: false }).pipe($.clean());
+gulp.task('html', function () {
+    return gulp.src([config.src.base + '/**/*.html'])
+        .pipe(gulp.dest(config.demo.base))
+        .pipe($.size({title: 'html'}));
 });
 
-gulp.task('build', ['html']);
-
-gulp.task('default', ['clean'], function () {
-    gulp.start('build');
+gulp.task('clean', function (cb) {
+    rimraf(config.dist.base, cb);
 });
 
-gulp.task('connect', function () {
-    var connect = require('connect');
-    var serveStatic = require('serve-static');
-    var app = connect()
-        .use(require('connect-livereload')({ port: 35729 }))
-        .use(serveStatic('src'))
-        .use(serveStatic('.tmp'))
-
-    require('http').createServer(app)
-        .listen(9000)
-        .on('listening', function () {
-            console.log('Started connect web server on http://localhost:9000');
-        });
-});
-
-gulp.task('serve', ['connect', 'styles'], function () {
-    require('opn')('http://localhost:9000');
-});
-
-gulp.task('watch', ['connect', 'serve'], function () {
-    var server = $.livereload();
-
-    // watch for changes
-    gulp.watch([
-        'src/*.html',
-        '.tmp/styles/**/*.css',
-    ]).on('change', function (file) {
-        server.changed(file.path);
+gulp.task('watch', ['build'], function () {
+    browserSync.init({
+        reloadDelay: 100,
+        server: {
+            baseDir: './' + config.demo.base
+        }
     });
 
-    gulp.watch('src/styles/**/*.scss', ['styles']);
+    gulp.watch([config.src.styles + '/**/*.scss'], ['styles']);
+    gulp.watch([config.src.base + '/**/*.html'], ['html']);
+
+    browserSync.watch(config.demo.base + '/**/*').on('change', browserSync.reload);
 });
 
-gulp.task('deploy', function() {
-  return gulp.src('./demo/**/*')
-    .pipe($.ghPages());
+// deploy to Github Pages
+gulp.task('deploy', ['build'], function() {
+    params.message = params.m || params.message;
+
+    var options = {};
+    options.message = params.message || 'Update ' + new Date();
+
+    return gulp.src(config.demo.base + '/**/*')
+        .pipe($.ghPages(options));
 });
 
+gulp.task('build', ['styles', 'html']);
+
+gulp.task('default', ['build']);
