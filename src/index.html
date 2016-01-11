@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="styles/the-flex-grid.css">
     </head>
     <body>
-        <!--[if lt IE 10]>
+        <!--[if lte IE 10]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and your life.</p>
         <![endif]-->
 
@@ -69,37 +69,39 @@
 </div>
 
 <pre>
-&lt;div class="grid"&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-12"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;  
-    &lt;div class="row"&gt;
-        &lt;div class="col-3"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-9"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-4"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-8"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-6"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-6"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<code>
+<div class="grid">
+    <div class="row">
+        <div class="col-12">
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="content"></div>
+        </div>
+        <div class="col-9">
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <div class="content"></div>
+        </div>
+        <div class="col-8">
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="content"></div>
+        </div>
+        <div class="col-6">
+            <div class="content"></div>
+        </div>
+    </div>
+</div>
+</code>
 </pre>
 
 <h3>Responsive grid</h3>
@@ -137,37 +139,39 @@
 </div>
 
 <pre>
-&lt;div class="grid"&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-large-12 col-medium-6"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-large-3 col-medium-6 col-small-12"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-large-9 col-medium-9 col-small-12"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-large-4"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-large-8"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-large-6"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-large-6"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<code>
+<div class="grid">
+    <div class="row">
+        <div class="col-large-12 col-medium-6">
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-large-3 col-medium-6 col-small-12">
+            <div class="content"></div>
+            </div>
+        <div class="col-large-9 col-medium-9 col-small-12">
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-large-4">
+            <div class="content"></div>
+            </div>
+        <div class="col-large-8">
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-large-6">
+            <div class="content"></div>
+        </div>
+        <div class="col-large-6">
+            <div class="content"></div>
+        </div>
+    </div>
+</div>
+</code>
 </pre>
 
 <h3>Smart columns</h3>
@@ -214,46 +218,48 @@
 </div>
 
 <pre>
-&lt;div class="grid"&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-large-4 col-medium-4 col-small-4"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col"&gt;
-            &lt;div class="content"&gt;smart column&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col"&gt;
-            &lt;div class="content"&gt;smart column&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-large-2 col-medium-2 col-small-2"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-large-3 col-medium-3 col-small-3"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col"&gt;
-            &lt;div class="content"&gt;smart column&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-large-2 col-medium-8 col-small-12"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col"&gt;
-            &lt;div class="content"&gt;smart column&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col"&gt;
-            &lt;div class="content"&gt;smart column&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col"&gt;
-            &lt;div class="content"&gt;smart column&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<code>
+<div class="grid">
+    <div class="row">
+        <div class="col-large-4 col-medium-4 col-small-4">
+            <div class="content"></div>
+        </div>
+        <div class="col">
+            <div class="content">smart column</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="content">smart column</div>
+        </div>
+        <div class="col-large-2 col-medium-2 col-small-2">
+            <div class="content"></div>
+        </div>
+        <div class="col-large-3 col-medium-3 col-small-3">
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="content">smart column</div>
+        </div>
+        <div class="col-large-2 col-medium-8 col-small-12">
+            <div class="content"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="content">smart column</div>
+        </div>
+        <div class="col">
+            <div class="content">smart column</div>
+        </div>
+        <div class="col">
+            <div class="content">smart column</div>
+        </div>
+    </div>
+</div>
+</code>
 </pre>
 
 <h3>Gutterless</h3>
@@ -273,19 +279,21 @@
 </div>
 
 <pre>
-&lt;div class="grid gutterless"&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col"&gt;
-            &lt;div class="content"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col"&gt;
-            &lt;div class="content orange"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col"&gt;
-            &lt;div class="content green"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<code>
+<div class="grid gutterless">
+    <div class="row">
+        <div class="col">
+            <div class="content"></div>
+        </div>
+        <div class="col">
+            <div class="content orange"></div>
+        </div>
+        <div class="col">
+            <div class="content green"></div>
+        </div>
+    </div>
+</div>
+</code>
 </pre>
 
 <h3>Subgrids</h3>
@@ -340,54 +348,56 @@
 </div>
 
 <pre>
-&lt;div class="grid"&gt;
-    &lt;div class="row"&gt;
-        &lt;div class="col-6"&gt;
-            &lt;div class="content"&gt;
-                &lt;div class="grid"&gt;
-                    &lt;div class="row"&gt;
-                        &lt;div class="col-6"&gt;
-                            &lt;div class="content"&gt;.col-6&lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="col-6"&gt;
-                            &lt;div class="content"&gt;.col-6&lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="row"&gt;
-                        &lt;div class="col-3"&gt;
-                            &lt;div class="content"&gt;.col-3&lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="col-9"&gt;
-                            &lt;div class="content"&gt;.col-9&lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="col-6"&gt;
-            &lt;div class="content"&gt;
-                &lt;div class="grid"&gt;
-                    &lt;div class="row"&gt;
-                        &lt;div class="col-7"&gt;
-                            &lt;div class="content"&gt;.col-7&lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="col-5"&gt;
-                            &lt;div class="content"&gt;.col-5&lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="row"&gt;
-                        &lt;div class="col-4"&gt;
-                            &lt;div class="content"&gt;.col-4&lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class="col-8"&gt;
-                            &lt;div class="content"&gt;.col-8&lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<code>
+<div class="grid">
+    <div class="row">
+        <div class="col-6">
+            <div class="content">
+                <div class="grid">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="content">.col-6</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">.col-6</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="content">.col-3</div>
+                        </div>
+                        <div class="col-9">
+                            <div class="content">.col-9</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="content">
+                <div class="grid">
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="content">.col-7</div>
+                        </div>
+                        <div class="col-5">
+                            <div class="content">.col-5</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="content">.col-4</div>
+                        </div>
+                        <div class="col-8">
+                            <div class="content">.col-8</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</code>
 </pre>
 
 <h3>Reverse order</h3>
@@ -406,17 +416,19 @@
 </div>
 
 <pre>
-&lt;div class="row row-reverse"&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;1&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;2&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<code>
+<div class="row row-reverse">
+    <div class="col-4">
+        <div class="content">1</div>
+    </div>
+    <div class="col-4">
+        <div class="content">2</div>
+    </div>
+    <div class="col-4">
+        <div class="content">3</div>
+    </div>
+</div>
+</code>
 </pre>
 
 <h3>Alignment</h3>
