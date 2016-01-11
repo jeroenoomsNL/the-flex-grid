@@ -15,12 +15,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
 body {
   margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 ::selection {
@@ -255,7 +255,6 @@ video {
 
 fieldset {
   border: 0;
-  margin: 0;
   padding: 0;
 }
 
@@ -269,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Lato", sans-serif;
 }
 
-p, table, ul, ol {
+p, table, ul, ol, fieldset, blockquote, dl {
   margin: 0 0 0.75em;
 }
 
