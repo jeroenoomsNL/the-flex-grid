@@ -20,7 +20,7 @@ var config = {
         scripts: 'dist/demo/scripts',
         styles: 'dist/demo/styles'
     },
-    autoprefixer: ['last 2 versions', 'Explorer >= 10', 'Firefox >= 25']
+    autoprefixer: ['last 2 versions', 'Explorer >= 10', 'Firefox >= 25', 'Safari >= 6']
 };
 
 gulp.task('styles', function () {
