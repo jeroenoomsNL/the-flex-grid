@@ -1,9 +1,14 @@
 //
 // Config
 //
-$gutter: 1em !default;
-$grid-maxwidth: 960px !default;
-$silent-only: false !default;
+$theflexgrid-gutter: 1em !default;
+$theflexgrid-maxwidth: 960px !default;
+$theflexgrid-silent-only: false !default;
+
+// breakpoints
+$theflexgrid-breakpoint-small: "(max-width: 767px)" !default;
+$theflexgrid-breakpoint-medium: "(min-width: 768px) and (max-width: 959px)" !default;
+$theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
 
 //
 // Viewport mixin
@@ -111,23 +116,23 @@ $silent-only: false !default;
  */
 %grid {
     margin: 0 auto;
-    max-width: $grid-maxwidth;
+    max-width: $theflexgrid-maxwidth;
     overflow: hidden;
 }
 
 %row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0  -#{$gutter/2} 0 -#{$gutter/2};
+    margin: 0  -#{$theflexgrid-gutter/2} 0 -#{$theflexgrid-gutter/2};
 
     & > * {
         box-sizing: border-box;
-        padding: 0 $gutter/2 $gutter;
+        padding: 0 $theflexgrid-gutter/2 $theflexgrid-gutter;
         flex-basis: 100%;
     }
 
     &:last-child {
-        margin-bottom: -#{$gutter};
+        margin-bottom: -#{$theflexgrid-gutter};
     }
 }
 
@@ -149,7 +154,7 @@ $silent-only: false !default;
     flex: 1 0 auto;
 }
 
-@if $silent-only == false {
+@if $theflexgrid-silent-only == false {
     .grid {
         @extend %grid;
     }
@@ -165,30 +170,30 @@ $silent-only: false !default;
     .col {
         @extend %col;
     }
-}
 
-/*
- * Default view
- */
-@include viewport(default);
+    /*
+     * Default view
+     */
+    @include viewport(default);
 
-/*
- * Small viewport (mobile)
- */
-@media (max-width: 767px) {
-    @include viewport(small);
-}
+    /*
+     * Small viewport (mobile)
+     */
+    @media #{$theflexgrid-breakpoint-small} {
+        @include viewport(small);
+    }
 
-/*
- * Medium viewport (tablets)
- */
-@media (min-width: 768px) and (max-width: 959px) {
-    @include viewport(medium);
-}
+    /*
+     * Medium viewport (tablets)
+     */
+    @media #{$theflexgrid-breakpoint-medium} {
+        @include viewport(medium);
+    }
 
-/*
- * Large viewport (desktop)
- */
-@media (min-width: 960px) {
-    @include viewport(large);
+    /*
+     * Large viewport (desktop)
+     */
+    @media #{$theflexgrid-breakpoint-large} {
+        @include viewport(large);
+    }
 }
