@@ -50,7 +50,7 @@ a {
 code, pre {
     background: white;
     border-radius: 0.3em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding: 1em 2em;
 }
 
@@ -180,12 +180,8 @@ code {
     min-height: 3em;
     text-align: center;
 
-    &.orange {
-        background: $color-orange;
-    }
-
-    &.green {
-        background: $color-green;
+    &.darkblue {
+        background: darken($color-accent, 20%);
     }
 }
 

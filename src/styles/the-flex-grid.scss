@@ -1,3 +1,8 @@
+/*
+ * The Flex Grid (v1.5.0) is a lightweight responsive CSS grid using flexbox. Because we can!
+ * http://jeroenoomsnl.github.io/the-flex-grid/
+ */
+
 //
 // Config
 //
@@ -25,39 +30,51 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
 
     div.col#{$viewport}-1 {
         flex-basis: 8.3333333333%;
+        max-width: 8.3333333333%;
     }
     div.col#{$viewport}-2 {
         flex-basis: 16.666666666%;
+        max-width: 16.666666666%;
     }
     div.col#{$viewport}-3 {
         flex-basis: 25%;
+        max-width: 25%;
     }
     div.col#{$viewport}-4 {
         flex-basis: 33.333333333%;
+        max-width: 33.333333333%;
     }
     div.col#{$viewport}-5 {
         flex-basis: 41.666666666%;
+        max-width: 41.666666666%;
     }
     div.col#{$viewport}-6 {
         flex-basis: 50%;
+        max-width: 50%;
     }
     div.col#{$viewport}-7 {
         flex-basis: 58.333333333%;
+        max-width: 58.333333333%;
     }
     div.col#{$viewport}-8 {
         flex-basis: 66.666666666%;
+        max-width: 66.666666666%;
     }
     div.col#{$viewport}-9 {
         flex-basis: 75%;
+        max-width: 75%;
     }
     div.col#{$viewport}-10 {
         flex-basis: 83.333333333%;
+        max-width: 83.333333333%;
     }
     div.col#{$viewport}-11 {
         flex-basis: 91.666666666%;
+        max-width: 91.666666666%;
     }
     div.col#{$viewport}-12 {
         flex-basis: 100%;
+        max-width: 100%;
     }
 
     div.col#{$viewport}-top {
@@ -91,9 +108,13 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
     .row#{$viewport}-reverse {
         flex-direction: row-reverse;
     }
-    
+
     .row#{$viewport}-equal > * {
         display: flex;
+
+        & > * {
+            width: 100%;
+        }
     }
 
     .row#{$viewport}-top {
@@ -104,16 +125,14 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
     }
     .row#{$viewport}-bottom {
         align-items: flex-end;
-    } 
+    }
 
     .hide#{$viewport} {
         display: none;
-    } 
+    }
 }
 
-/*
- * Generic grid styles
- */
+/* Generic grid styles */
 %grid {
     margin: 0 auto;
     max-width: $theflexgrid-maxwidth;
@@ -171,28 +190,20 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
         @extend %col;
     }
 
-    /*
-     * Default view
-     */
+    /* Default view */
     @include viewport(default);
 
-    /*
-     * Small viewport (mobile)
-     */
+    /* Small viewport (mobile) */
     @media #{$theflexgrid-breakpoint-small} {
         @include viewport(small);
     }
 
-    /*
-     * Medium viewport (tablets)
-     */
+    /* Medium viewport (tablets) */
     @media #{$theflexgrid-breakpoint-medium} {
         @include viewport(medium);
     }
 
-    /*
-     * Large viewport (desktop)
-     */
+    /* Large viewport (desktop) */
     @media #{$theflexgrid-breakpoint-large} {
         @include viewport(large);
     }

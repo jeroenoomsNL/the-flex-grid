@@ -23,7 +23,7 @@
                     <h1>The Flex Grid</h1>
                     <h2>Lightweight responsive CSS grid using flexbox. Because we can!</h2>
                 </div>
-                        
+
                 <div class="header-buttons">
                     <a href="https://github.com/jeroenoomsNL/the-flex-grid/archive/master.zip" class="header-button" title="Download The Flex Grid"><i class="fa fa-download"></i> Download</a>
                     <a href="https://github.com/jeroenoomsNL/the-flex-grid" class="header-button" target="_blank" title="Fork The Flex Grid on Github"><i class="fa fa-github"></i> Fork on Github</a>
@@ -264,10 +264,10 @@
             <div class="content"></div>
         </div>
         <div class="col">
-            <div class="content orange"></div>
+            <div class="content darkblue"></div>
         </div>
         <div class="col">
-            <div class="content green"></div>
+            <div class="content"></div>
         </div>
     </div>
 </div>
@@ -288,7 +288,8 @@
 &lt;/div&gt;
 </pre>
 
-<h3>Subgrids</h3>
+<h3>Nested grid / Subgrid</h3>
+<p>The Flex Grid is nestable. Every nested grid needs the .grid container.</p>
 
 <div class="grid">
     <div class="row">
@@ -393,28 +394,32 @@
 <h3>Reverse order</h3>
 <p>Extend a row with the <em>row-reverse</em> class to reverse the order of the columns. For responsive use <em>row-small-reverse, row-medium-reverse or row-large-reverse</em>.</p>
 
-<div class="row row-reverse">
-    <div class="col-4">
-        <div class="content">1</div>
-    </div>
-    <div class="col-4">
-        <div class="content">2</div>
-    </div>
-    <div class="col-4">
-        <div class="content">3</div>
+<div class="grid">
+    <div class="row row-reverse">
+        <div class="col-4">
+            <div class="content">1</div>
+        </div>
+        <div class="col-4">
+            <div class="content">2</div>
+        </div>
+        <div class="col-4">
+            <div class="content">3</div>
+        </div>
     </div>
 </div>
 
 <pre>
-&lt;div class=&quot;row row-reverse&quot;&gt;
-    &lt;div class=&quot;col-4&quot;&gt;
-        &lt;div class=&quot;content&quot;&gt;1&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;col-4&quot;&gt;
-        &lt;div class=&quot;content&quot;&gt;2&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;col-4&quot;&gt;
-        &lt;div class=&quot;content&quot;&gt;3&lt;/div&gt;
+&lt;div class=&quot;grid&quot;&gt;
+    &lt;div class=&quot;row row-reverse&quot;&gt;
+        &lt;div class=&quot;col-4&quot;&gt;
+            &lt;div class=&quot;content&quot;&gt;1&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;
+            &lt;div class=&quot;content&quot;&gt;2&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-4&quot;&gt;
+            &lt;div class=&quot;content&quot;&gt;3&lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -423,28 +428,32 @@
 
 <h4>Align left</h4>
 <p>Extend a row with the <em>row-left</em> class to align the columns to the left. For responsive use <em>row-small-left, row-medium-left or row-large-left</em>.</p>
-<div class="row row-left">
-    <div class="col-2">
-        <div class="content"></div>
-    </div>
-    <div class="col-3">
-        <div class="content"></div>
-    </div>
-    <div class="col-2">
-        <div class="content"></div>
+<div class="grid">
+    <div class="row row-left">
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
+        <div class="col-3">
+            <div class="content"></div>
+        </div>
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
     </div>
 </div>
 
 <pre>
-&lt;div class="row row-left"&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-3"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
+&lt;div class="grid"&gt;
+    &lt;div class="row row-left"&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-3"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -452,28 +461,32 @@
 <h4>Align right</h4>
 <p>Extend a row with the <em>row-right</em> class to align the columns to the right. For responsive use <em>row-small-right, row-medium-right or row-large-right</em>.</p>
 
-<div class="row row-right">
-    <div class="col-2">
-        <div class="content"></div>
-    </div>
-    <div class="col-3">
-        <div class="content"></div>
-    </div>
-    <div class="col-2">
-        <div class="content"></div>
+<div class="grid">
+    <div class="row row-right">
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
+        <div class="col-3">
+            <div class="content"></div>
+        </div>
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
     </div>
 </div>
 
 <pre>
-&lt;div class="row row-right"&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-3"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
+&lt;div class="grid"&gt;
+    &lt;div class="row row-right"&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-3"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -481,28 +494,32 @@
 <h4>Align center</h4>
 <p>Extend a row with the <em>row-center</em> class to align the columns to the center. For responsive use <em>row-small-right, row-medium-right or row-large-right</em>.</p>
 
-<div class="row row-center">
-    <div class="col-2">
-        <div class="content"></div>
-    </div>
-    <div class="col-3">
-        <div class="content"></div>
-    </div>
-    <div class="col-2">
-        <div class="content"></div>
+<div class="grid">
+    <div class="row row-center">
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
+        <div class="col-3">
+            <div class="content"></div>
+        </div>
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
     </div>
 </div>
 
 <pre>
-&lt;div class="row row-center"&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-3"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
+&lt;div class="grid"&gt;
+    &lt;div class="row row-center"&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-3"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -510,28 +527,32 @@
 <h4>Space between</h4>
 <p>Extend a row with the <em>row-space-between</em> class to distribute the columns evenly in the line. The first column will be aligned to the left and the last column to the right. For responsive use <em>row-small-space-between, row-medium-space-between or row-large-space-between</em>.</p>
 
-<div class="row row-space-between">
-    <div class="col-2">
-        <div class="content"></div>
-    </div>
-    <div class="col-3">
-        <div class="content"></div>
-    </div>
-    <div class="col-2">
-        <div class="content"></div>
+<div class="grid">
+    <div class="row row-space-between">
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
+        <div class="col-3">
+            <div class="content"></div>
+        </div>
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
     </div>
 </div>
 
 <pre>
-&lt;div class="row row-space-between"&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-3"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
+&lt;div class="grid"&gt;
+    &lt;div class="row row-space-between"&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-3"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
@@ -539,109 +560,77 @@
 <h4>Space around</h4>
 <p>Extend a row with the <em>row-space-around</em> class to distribute the columns evenly in the line. The columns will have equal space between them. The space at the begin and the end of the line will be half of the space between the columns. For responsive use <em>row-small-space-between, row-medium-space-between or row-large-space-between</em>.</p>
 
-<div class="row row-space-around">
-    <div class="col-2">
-        <div class="content"></div>
-    </div>
-    <div class="col-3">
-        <div class="content"></div>
-    </div>
-    <div class="col-2">
-        <div class="content"></div>
+<div class="grid">
+    <div class="row row-space-around">
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
+        <div class="col-3">
+            <div class="content"></div>
+        </div>
+        <div class="col-2">
+            <div class="content"></div>
+        </div>
     </div>
 </div>
 
 <pre>
-&lt;div class="row row-space-around"&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-3"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-2"&gt;
-        &lt;div class="content"&gt;&lt;/div&gt;
+&lt;div class="grid"&gt;
+    &lt;div class="row row-space-around"&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-3"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-2"&gt;
+            &lt;div class="content"&gt;&lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
 <h3>Column height &amp; alignment</h3>
 
-<p>Default the columns of The Flex Grid have equal height, but the <em>row-equal</em> allows you to make the child element of all columns the same height. Usefull if you need borders or border-radius.</p>
-
-<div class="row row-equal demo-column-height">
-    <div class="col-4">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
-        </div>
-    </div>
-    <div class="col-4">
-        <div class="content">
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
-        </div>
-    </div>
-</div>
-
-<pre>
-&lt;div class="row row-equal"&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
 <h4>Individual height align top</h4>
 
-<div class="row row-top demo-column-height">
-    <div class="col-4">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+<div class="grid">
+    <div class="row row-top demo-column-height">
+        <div class="col-4">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+            </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        <div class="col-4">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="content">
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        <div class="col-4">
+            <div class="content">
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
         </div>
     </div>
 </div>
 
 <pre>
-&lt;div class="row row-top"&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+&lt;div class="grid"&gt;
+    &lt;div class="row row-top"&gt;
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -649,39 +638,43 @@
 
 <h4>Individual height align center</h4>
 
-<div class="row row-middle demo-column-height">
-    <div class="col-4">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+<div class="grid">
+    <div class="row row-middle demo-column-height">
+        <div class="col-4">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+            </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        <div class="col-4">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="content">
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        <div class="col-4">
+            <div class="content">
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
         </div>
     </div>
 </div>
 
 <pre>
-&lt;div class="row row-middle"&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+&lt;div class="grid"&gt;
+    &lt;div class="row row-middle"&gt;
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -689,39 +682,43 @@
 
 <h4>Individual height align bottom</h4>
 
-<div class="row row-bottom demo-column-height">
-    <div class="col-4">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+<div class="grid">
+    <div class="row row-bottom demo-column-height">
+        <div class="col-4">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+            </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        <div class="col-4">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="content">
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        <div class="col-4">
+            <div class="content">
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
         </div>
     </div>
 </div>
 
 <pre>
-&lt;div class="row row-bottom"&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+&lt;div class="grid"&gt;
+    &lt;div class="row row-bottom"&gt;
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4"&gt;
-        &lt;div class="content"&gt;
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -730,55 +727,209 @@
 <h4>Align single column</h4>
 <p>In case of <em>row-top</em>, <em>row-middle</em> or <em>row-bottom</em> you can overwrite the vertical alignment of a single column.</p>
 
-<div class="row row-top demo-column-height">
-    <div class="col-3 col-bottom">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati.
+<div class="grid">
+    <div class="row row-top demo-column-height">
+        <div class="col-3 col-bottom">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati.
+            </div>
         </div>
-    </div>
-    <div class="col-3">
-        <div class="content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        <div class="col-3">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
         </div>
-    </div>
-    <div class="col-3 col-top">
-        <div class="content">
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        <div class="col-3 col-top">
+            <div class="content">
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
         </div>
-    </div>
-    <div class="col-3 col-middle">
-        <div class="content">
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        <div class="col-3 col-middle">
+            <div class="content">
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
         </div>
     </div>
 </div>
 
 <pre>
-&lt;div class="row row-top"&gt;
-    &lt;div class="col-3 col-bottom"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati.
+&lt;div class="grid"&gt;
+    &lt;div class="row row-top"&gt;
+        &lt;div class="col-3 col-bottom"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati.
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-3"&gt;
-        &lt;div class="content"&gt;
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;div class="col-3"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-3 col-top"&gt;
-        &lt;div class="content"&gt;
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;div class="col-3 col-top"&gt;
+            &lt;div class="content"&gt;
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-3 col-middle"&gt;
-        &lt;div class="content"&gt;
-            Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+        &lt;div class="col-3 col-middle"&gt;
+            &lt;div class="content"&gt;
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
+<h4>Equal column height</h4>
+<p>Default the columns of The Flex Grid have equal height, but the <em>row-equal</em> allows you to make the child element of all columns the same height. Usefull if you need borders or border-radius.</p>
+
+<div class="grid">
+    <div class="row row-equal demo-column-height">
+        <div class="col-4">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="content">
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre>
+&lt;div class="grid"&gt;
+    &lt;div class="row row-equal"&gt;
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-4"&gt;
+            &lt;div class="content"&gt;
+                Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h4>Nested grid with equal column height</h4>
+<p>In a nested grid it's still possible to use the equal column height feature. Add the <em>row-equal</em> class to every row that needs to have equal height.</p>
+
+<div class="grid">
+    <div class="row row-equal demo-column-height">
+        <div class="col-6">
+            <div class="content">
+                <div class="grid">
+                    <div class="row row-equal">
+                        <div class="col-6">
+                            <div class="content">Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis.</div>
+                        </div>
+                    </div>
+                    <div class="row row-equal">
+                        <div class="col-3">
+                            <div class="content">Veniam modi</div>
+                        </div>
+                        <div class="col-9">
+                            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="content">
+                <div class="grid">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="content">Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.</div>
+                        </div>
+                        <div class="col-8">
+                            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis.</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="content">Veniam modi</div>
+                        </div>
+                        <div class="col-5">
+                            <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<pre>
+&lt;div class="grid"&gt;
+    &lt;div class="row row-equal demo-column-height"&gt;
+        &lt;div class="col-6"&gt;
+            &lt;div class="content"&gt;
+                &lt;div class="grid"&gt;
+                    &lt;div class="row row-equal"&gt;
+                        &lt;div class="col-6"&gt;
+                            &lt;div class="content"&gt;Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-6"&gt;
+                            &lt;div class="content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis.&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row row-equal"&gt;
+                        &lt;div class="col-3"&gt;
+                            &lt;div class="content"&gt;Veniam modi&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-9"&gt;
+                            &lt;div class="content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga.&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-6"&gt;
+            &lt;div class="content"&gt;
+                &lt;div class="grid"&gt;
+                    &lt;div class="row row-equal"&gt;
+                        &lt;div class="col-4"&gt;
+                            &lt;div class="content"&gt;Perspiciatis tenetur, veniam modi corrupti corporis. Asperiores, veritatis quia.&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-8"&gt;
+                            &lt;div class="content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere odio, totam ullam iusto aliquid obcaecati nulla unde temporibus praesentium magni fuga, perspiciatis tenetur, veniam modi corrupti corporis.&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="row row-equal"&gt;
+                        &lt;div class="col-7"&gt;
+                            &lt;div class="content"&gt;Veniam modi&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="col-5"&gt;
+                            &lt;div class="content"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
 <h3>Hide column for current breakpoint</h3>
+
 
 <div class="row">
     <div class="col-4 hide-small">
@@ -799,27 +950,29 @@
 </div>
 
 <pre>
-&lt;div class="row row-bottom"&gt;
-    &lt;div class="col-4 hide-small"&gt;
-        &lt;div class="content"&gt;
-            small
+&lt;div class="grid">
+    &lt;div class="row row-bottom"&gt;
+        &lt;div class="col-4 hide-small"&gt;
+            &lt;div class="content"&gt;
+                small
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4 hide-medium"&gt;
-        &lt;div class="content"&gt;
-            medium
+        &lt;div class="col-4 hide-medium"&gt;
+            &lt;div class="content"&gt;
+                medium
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="col-4 hide-large"&gt;
-        &lt;div class="content"&gt;
-            large
+        &lt;div class="col-4 hide-large"&gt;
+            &lt;div class="content"&gt;
+                large
+            &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
         </main>
-    
+
         <footer class="footer">
             <section class="footer-wrapper">
                 This page is based on <a href="https://github.com/jeroenoomsNL/github-project-starter" title="Github Project Starter by Jeroen Ooms">Github Project Starter</a> by <a href="http://jeroenooms.nl" title="Website Jeroen Ooms">Jeroen Ooms</a> <a href="https://github.com/jeroenoomsNL" title="Github account Jeroen Ooms"><i class="fa fa-github"></i></a> <a href="http://twitter.com/jeroenooms" title="Twitter account Jeroen Ooms"><i class="fa fa-twitter"></i></a>
