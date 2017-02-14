@@ -1,6 +1,8 @@
 /*
- * Generic grid styles
+ * The Flex Grid (v1.5.0) is a lightweight responsive CSS grid using flexbox. Because we can!
+ * http://jeroenoomsnl.github.io/the-flex-grid/
  */
+/* Generic grid styles */
 .grid {
   margin: 0 auto;
   max-width: 960px;
@@ -35,55 +37,65 @@
   flex: 1 0 auto;
 }
 
-/*
- * Default view
- */
+/* Default view */
 div.col-1 {
   flex-basis: 8.3333333333%;
+  max-width: 8.3333333333%;
 }
 
 div.col-2 {
   flex-basis: 16.666666666%;
+  max-width: 16.666666666%;
 }
 
 div.col-3 {
   flex-basis: 25%;
+  max-width: 25%;
 }
 
 div.col-4 {
   flex-basis: 33.333333333%;
+  max-width: 33.333333333%;
 }
 
 div.col-5 {
   flex-basis: 41.666666666%;
+  max-width: 41.666666666%;
 }
 
 div.col-6 {
   flex-basis: 50%;
+  max-width: 50%;
 }
 
 div.col-7 {
   flex-basis: 58.333333333%;
+  max-width: 58.333333333%;
 }
 
 div.col-8 {
   flex-basis: 66.666666666%;
+  max-width: 66.666666666%;
 }
 
 div.col-9 {
   flex-basis: 75%;
+  max-width: 75%;
 }
 
 div.col-10 {
   flex-basis: 83.333333333%;
+  max-width: 83.333333333%;
 }
 
 div.col-11 {
   flex-basis: 91.666666666%;
+  max-width: 91.666666666%;
 }
 
 div.col-12 {
   flex-basis: 100%;
+  max-width: 100%;
 }
 
 div.col-top {
@@ -125,6 +137,9 @@ div.col-middle {
 .row-equal > * {
   display: flex;
 }
+.row-equal > * > * {
+  width: 100%;
+}
 
 .row-top {
   align-items: flex-start;
@@ -142,56 +157,66 @@ div.col-middle {
   display: none;
 }
 
-/*
- * Small viewport (mobile)
- */
+/* Small viewport (mobile) */
 @media (max-width: 767px) {
   div.col-small-1 {
     flex-basis: 8.3333333333%;
+    max-width: 8.3333333333%;
   }
 
   div.col-small-2 {
     flex-basis: 16.666666666%;
+    max-width: 16.666666666%;
   }
 
   div.col-small-3 {
     flex-basis: 25%;
+    max-width: 25%;
   }
 
   div.col-small-4 {
     flex-basis: 33.333333333%;
+    max-width: 33.333333333%;
   }
 
   div.col-small-5 {
     flex-basis: 41.666666666%;
+    max-width: 41.666666666%;
   }
 
   div.col-small-6 {
     flex-basis: 50%;
+    max-width: 50%;
   }
 
   div.col-small-7 {
     flex-basis: 58.333333333%;
+    max-width: 58.333333333%;
   }
 
   div.col-small-8 {
     flex-basis: 66.666666666%;
+    max-width: 66.666666666%;
   }
 
   div.col-small-9 {
     flex-basis: 75%;
+    max-width: 75%;
   }
 
   div.col-small-10 {
     flex-basis: 83.333333333%;
+    max-width: 83.333333333%;
   }
 
   div.col-small-11 {
     flex-basis: 91.666666666%;
+    max-width: 91.666666666%;
   }
 
   div.col-small-12 {
     flex-basis: 100%;
+    max-width: 100%;
   }
 
   div.col-small-top {
@@ -233,6 +258,9 @@ div.col-middle {
   .row-small-equal > * {
     display: flex;
   }
+  .row-small-equal > * > * {
+    width: 100%;
+  }
 
   .row-small-top {
     align-items: flex-start;
@@ -250,56 +278,66 @@ div.col-middle {
     display: none;
   }
 }
-/*
- * Medium viewport (tablets)
- */
+/* Medium viewport (tablets) */
 @media (min-width: 768px) and (max-width: 959px) {
   div.col-medium-1 {
     flex-basis: 8.3333333333%;
+    max-width: 8.3333333333%;
   }
 
   div.col-medium-2 {
     flex-basis: 16.666666666%;
+    max-width: 16.666666666%;
   }
 
   div.col-medium-3 {
     flex-basis: 25%;
+    max-width: 25%;
   }
 
   div.col-medium-4 {
     flex-basis: 33.333333333%;
+    max-width: 33.333333333%;
   }
 
   div.col-medium-5 {
     flex-basis: 41.666666666%;
+    max-width: 41.666666666%;
   }
 
   div.col-medium-6 {
     flex-basis: 50%;
+    max-width: 50%;
   }
 
   div.col-medium-7 {
     flex-basis: 58.333333333%;
+    max-width: 58.333333333%;
   }
 
   div.col-medium-8 {
     flex-basis: 66.666666666%;
+    max-width: 66.666666666%;
   }
 
   div.col-medium-9 {
     flex-basis: 75%;
+    max-width: 75%;
   }
 
   div.col-medium-10 {
     flex-basis: 83.333333333%;
+    max-width: 83.333333333%;
   }
 
   div.col-medium-11 {
     flex-basis: 91.666666666%;
+    max-width: 91.666666666%;
   }
 
   div.col-medium-12 {
     flex-basis: 100%;
+    max-width: 100%;
   }
 
   div.col-medium-top {
@@ -341,6 +379,9 @@ div.col-middle {
   .row-medium-equal > * {
     display: flex;
   }
+  .row-medium-equal > * > * {
+    width: 100%;
+  }
 
   .row-medium-top {
     align-items: flex-start;
@@ -358,56 +399,66 @@ div.col-middle {
     display: none;
   }
 }
-/*
- * Large viewport (desktop)
- */
+/* Large viewport (desktop) */
 @media (min-width: 960px) {
   div.col-large-1 {
     flex-basis: 8.3333333333%;
+    max-width: 8.3333333333%;
   }
 
   div.col-large-2 {
     flex-basis: 16.666666666%;
+    max-width: 16.666666666%;
   }
 
   div.col-large-3 {
     flex-basis: 25%;
+    max-width: 25%;
   }
 
   div.col-large-4 {
     flex-basis: 33.333333333%;
+    max-width: 33.333333333%;
   }
 
   div.col-large-5 {
     flex-basis: 41.666666666%;
+    max-width: 41.666666666%;
   }
 
   div.col-large-6 {
     flex-basis: 50%;
+    max-width: 50%;
   }
 
   div.col-large-7 {
     flex-basis: 58.333333333%;
+    max-width: 58.333333333%;
   }
 
   div.col-large-8 {
     flex-basis: 66.666666666%;
+    max-width: 66.666666666%;
   }
 
   div.col-large-9 {
     flex-basis: 75%;
+    max-width: 75%;
   }
 
   div.col-large-10 {
     flex-basis: 83.333333333%;
+    max-width: 83.333333333%;
   }
 
   div.col-large-11 {
     flex-basis: 91.666666666%;
+    max-width: 91.666666666%;
   }
 
   div.col-large-12 {
     flex-basis: 100%;
+    max-width: 100%;
   }
 
   div.col-large-top {
@@ -448,6 +499,9 @@ div.col-middle {
 
   .row-large-equal > * {
     display: flex;
+  }
+  .row-large-equal > * > * {
+    width: 100%;
   }
 
   .row-large-top {

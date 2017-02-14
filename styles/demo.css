@@ -484,7 +484,7 @@ a {
 code, pre {
   background: white;
   border-radius: 0.3em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   padding: 1em 2em;
 }
 
@@ -599,11 +599,8 @@ code {
   min-height: 3em;
   text-align: center;
 }
-.demo .content.orange {
-  background: orange;
-}
-.demo .content.green {
-  background: green;
+.demo .content.darkblue {
+  background: #1c7393;
 }
 
 .demo .content > .grid > .row .content {
