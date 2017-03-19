@@ -1,5 +1,5 @@
 /*
- * The Flex Grid (v1.5.0) is a lightweight responsive CSS grid using flexbox. Because we can!
+ * The Flex Grid (v1.5.1) is a lightweight responsive CSS grid using flexbox. Because we can!
  * http://jeroenoomsnl.github.io/the-flex-grid/
  */
 
@@ -28,81 +28,81 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
         $viewport: '';
     }
 
-    div.col#{$viewport}-1 {
+    .col#{$viewport}-1 {
         flex-basis: 8.3333333333%;
         max-width: 8.3333333333%;
     }
-    div.col#{$viewport}-2 {
+    .col#{$viewport}-2 {
         flex-basis: 16.666666666%;
         max-width: 16.666666666%;
     }
-    div.col#{$viewport}-3 {
+    .col#{$viewport}-3 {
         flex-basis: 25%;
         max-width: 25%;
     }
-    div.col#{$viewport}-4 {
+    .col#{$viewport}-4 {
         flex-basis: 33.333333333%;
         max-width: 33.333333333%;
     }
-    div.col#{$viewport}-5 {
+    .col#{$viewport}-5 {
         flex-basis: 41.666666666%;
         max-width: 41.666666666%;
     }
-    div.col#{$viewport}-6 {
+    .col#{$viewport}-6 {
         flex-basis: 50%;
         max-width: 50%;
     }
-    div.col#{$viewport}-7 {
+    .col#{$viewport}-7 {
         flex-basis: 58.333333333%;
         max-width: 58.333333333%;
     }
-    div.col#{$viewport}-8 {
+    .col#{$viewport}-8 {
         flex-basis: 66.666666666%;
         max-width: 66.666666666%;
     }
-    div.col#{$viewport}-9 {
+    .col#{$viewport}-9 {
         flex-basis: 75%;
         max-width: 75%;
     }
-    div.col#{$viewport}-10 {
+    .col#{$viewport}-10 {
         flex-basis: 83.333333333%;
         max-width: 83.333333333%;
     }
-    div.col#{$viewport}-11 {
+    .col#{$viewport}-11 {
         flex-basis: 91.666666666%;
         max-width: 91.666666666%;
     }
-    div.col#{$viewport}-12 {
+    .col#{$viewport}-12 {
         flex-basis: 100%;
         max-width: 100%;
     }
 
-    div.col#{$viewport}-top {
+    .col#{$viewport}-top {
         align-self: flex-start;
     }
 
-    div.col#{$viewport}-bottom {
+    .col#{$viewport}-bottom {
         align-self: flex-end;
     }
 
-    div.col#{$viewport}-middle {
+    .col#{$viewport}-middle {
         align-self: center;
     }
 
     .row#{$viewport}-left {
-      justify-content: flex-start;
+        justify-content: flex-start;
     }
     .row#{$viewport}-right {
-      justify-content: flex-end;
+        justify-content: flex-end;
     }
     .row#{$viewport}-center {
-      justify-content: center;
+        justify-content: center;
     }
     .row#{$viewport}-space-between {
-      justify-content: space-between;
+        justify-content: space-between;
     }
     .row#{$viewport}-space-around {
-      justify-content: space-around;
+        justify-content: space-around;
     }
 
     .row#{$viewport}-reverse {
@@ -135,7 +135,6 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
 /* Generic grid styles */
 %grid {
     margin: 0 auto;
-    max-width: $theflexgrid-maxwidth;
     overflow: hidden;
 }
 
@@ -156,7 +155,7 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
 }
 
 %gutterless {
-    & > * {
+    & > .row {
         margin: 0;
 
         & > * {

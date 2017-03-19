@@ -1,11 +1,10 @@
 /*
- * The Flex Grid (v1.5.0) is a lightweight responsive CSS grid using flexbox. Because we can!
+ * The Flex Grid (v1.5.1) is a lightweight responsive CSS grid using flexbox. Because we can!
  * http://jeroenoomsnl.github.io/the-flex-grid/
  */
 /* Generic grid styles */
 .grid {
   margin: 0 auto;
-  max-width: 960px;
   overflow: hidden;
 }
 
@@ -31,13 +30,13 @@
   margin-bottom: -1em;
 }
 
-.gutterless > * {
+.gutterless > .row {
   margin: 0;
 }
-.gutterless > * > * {
+.gutterless > .row > * {
   padding: 0;
 }
-.gutterless > *:last-child {
+.gutterless > .row:last-child {
   margin-bottom: 0;
 }
 
@@ -49,103 +48,103 @@
 }
 
 /* Default view */
-div.col-1 {
+.col-1 {
   -webkit-flex-basis: 8.3333333333%;
       -ms-flex-preferred-size: 8.3333333333%;
           flex-basis: 8.3333333333%;
   max-width: 8.3333333333%;
 }
 
-div.col-2 {
+.col-2 {
   -webkit-flex-basis: 16.666666666%;
       -ms-flex-preferred-size: 16.666666666%;
           flex-basis: 16.666666666%;
   max-width: 16.666666666%;
 }
 
-div.col-3 {
+.col-3 {
   -webkit-flex-basis: 25%;
       -ms-flex-preferred-size: 25%;
           flex-basis: 25%;
   max-width: 25%;
 }
 
-div.col-4 {
+.col-4 {
   -webkit-flex-basis: 33.333333333%;
       -ms-flex-preferred-size: 33.333333333%;
           flex-basis: 33.333333333%;
   max-width: 33.333333333%;
 }
 
-div.col-5 {
+.col-5 {
   -webkit-flex-basis: 41.666666666%;
       -ms-flex-preferred-size: 41.666666666%;
           flex-basis: 41.666666666%;
   max-width: 41.666666666%;
 }
 
-div.col-6 {
+.col-6 {
   -webkit-flex-basis: 50%;
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%;
   max-width: 50%;
 }
 
-div.col-7 {
+.col-7 {
   -webkit-flex-basis: 58.333333333%;
       -ms-flex-preferred-size: 58.333333333%;
           flex-basis: 58.333333333%;
   max-width: 58.333333333%;
 }
 
-div.col-8 {
+.col-8 {
   -webkit-flex-basis: 66.666666666%;
       -ms-flex-preferred-size: 66.666666666%;
           flex-basis: 66.666666666%;
   max-width: 66.666666666%;
 }
 
-div.col-9 {
+.col-9 {
   -webkit-flex-basis: 75%;
       -ms-flex-preferred-size: 75%;
           flex-basis: 75%;
   max-width: 75%;
 }
 
-div.col-10 {
+.col-10 {
   -webkit-flex-basis: 83.333333333%;
       -ms-flex-preferred-size: 83.333333333%;
           flex-basis: 83.333333333%;
   max-width: 83.333333333%;
 }
 
-div.col-11 {
+.col-11 {
   -webkit-flex-basis: 91.666666666%;
       -ms-flex-preferred-size: 91.666666666%;
           flex-basis: 91.666666666%;
   max-width: 91.666666666%;
 }
 
-div.col-12 {
+.col-12 {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
   max-width: 100%;
 }
 
-div.col-top {
+.col-top {
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;
 }
 
-div.col-bottom {
+.col-bottom {
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
           align-self: flex-end;
 }
 
-div.col-middle {
+.col-middle {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
@@ -233,103 +232,103 @@ div.col-middle {
 
 /* Small viewport (mobile) */
 @media (max-width: 767px) {
-  div.col-small-1 {
+  .col-small-1 {
     -webkit-flex-basis: 8.3333333333%;
         -ms-flex-preferred-size: 8.3333333333%;
             flex-basis: 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
-  div.col-small-2 {
+  .col-small-2 {
     -webkit-flex-basis: 16.666666666%;
         -ms-flex-preferred-size: 16.666666666%;
             flex-basis: 16.666666666%;
     max-width: 16.666666666%;
   }
 
-  div.col-small-3 {
+  .col-small-3 {
     -webkit-flex-basis: 25%;
         -ms-flex-preferred-size: 25%;
             flex-basis: 25%;
     max-width: 25%;
   }
 
-  div.col-small-4 {
+  .col-small-4 {
     -webkit-flex-basis: 33.333333333%;
         -ms-flex-preferred-size: 33.333333333%;
             flex-basis: 33.333333333%;
     max-width: 33.333333333%;
   }
 
-  div.col-small-5 {
+  .col-small-5 {
     -webkit-flex-basis: 41.666666666%;
         -ms-flex-preferred-size: 41.666666666%;
             flex-basis: 41.666666666%;
     max-width: 41.666666666%;
   }
 
-  div.col-small-6 {
+  .col-small-6 {
     -webkit-flex-basis: 50%;
         -ms-flex-preferred-size: 50%;
             flex-basis: 50%;
     max-width: 50%;
   }
 
-  div.col-small-7 {
+  .col-small-7 {
     -webkit-flex-basis: 58.333333333%;
         -ms-flex-preferred-size: 58.333333333%;
             flex-basis: 58.333333333%;
     max-width: 58.333333333%;
   }
 
-  div.col-small-8 {
+  .col-small-8 {
     -webkit-flex-basis: 66.666666666%;
         -ms-flex-preferred-size: 66.666666666%;
             flex-basis: 66.666666666%;
     max-width: 66.666666666%;
   }
 
-  div.col-small-9 {
+  .col-small-9 {
     -webkit-flex-basis: 75%;
         -ms-flex-preferred-size: 75%;
             flex-basis: 75%;
     max-width: 75%;
   }
 
-  div.col-small-10 {
+  .col-small-10 {
     -webkit-flex-basis: 83.333333333%;
         -ms-flex-preferred-size: 83.333333333%;
             flex-basis: 83.333333333%;
     max-width: 83.333333333%;
   }
 
-  div.col-small-11 {
+  .col-small-11 {
     -webkit-flex-basis: 91.666666666%;
         -ms-flex-preferred-size: 91.666666666%;
             flex-basis: 91.666666666%;
     max-width: 91.666666666%;
   }
 
-  div.col-small-12 {
+  .col-small-12 {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
     max-width: 100%;
   }
 
-  div.col-small-top {
+  .col-small-top {
     -webkit-align-self: flex-start;
         -ms-flex-item-align: start;
             align-self: flex-start;
   }
 
-  div.col-small-bottom {
+  .col-small-bottom {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
   }
 
-  div.col-small-middle {
+  .col-small-middle {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center;
@@ -417,103 +416,103 @@ div.col-middle {
 }
 /* Medium viewport (tablets) */
 @media (min-width: 768px) and (max-width: 959px) {
-  div.col-medium-1 {
+  .col-medium-1 {
     -webkit-flex-basis: 8.3333333333%;
         -ms-flex-preferred-size: 8.3333333333%;
             flex-basis: 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
-  div.col-medium-2 {
+  .col-medium-2 {
     -webkit-flex-basis: 16.666666666%;
         -ms-flex-preferred-size: 16.666666666%;
             flex-basis: 16.666666666%;
     max-width: 16.666666666%;
   }
 
-  div.col-medium-3 {
+  .col-medium-3 {
     -webkit-flex-basis: 25%;
         -ms-flex-preferred-size: 25%;
             flex-basis: 25%;
     max-width: 25%;
   }
 
-  div.col-medium-4 {
+  .col-medium-4 {
     -webkit-flex-basis: 33.333333333%;
         -ms-flex-preferred-size: 33.333333333%;
             flex-basis: 33.333333333%;
     max-width: 33.333333333%;
   }
 
-  div.col-medium-5 {
+  .col-medium-5 {
     -webkit-flex-basis: 41.666666666%;
         -ms-flex-preferred-size: 41.666666666%;
             flex-basis: 41.666666666%;
     max-width: 41.666666666%;
   }
 
-  div.col-medium-6 {
+  .col-medium-6 {
     -webkit-flex-basis: 50%;
         -ms-flex-preferred-size: 50%;
             flex-basis: 50%;
     max-width: 50%;
   }
 
-  div.col-medium-7 {
+  .col-medium-7 {
     -webkit-flex-basis: 58.333333333%;
         -ms-flex-preferred-size: 58.333333333%;
             flex-basis: 58.333333333%;
     max-width: 58.333333333%;
   }
 
-  div.col-medium-8 {
+  .col-medium-8 {
     -webkit-flex-basis: 66.666666666%;
         -ms-flex-preferred-size: 66.666666666%;
             flex-basis: 66.666666666%;
     max-width: 66.666666666%;
   }
 
-  div.col-medium-9 {
+  .col-medium-9 {
     -webkit-flex-basis: 75%;
         -ms-flex-preferred-size: 75%;
             flex-basis: 75%;
     max-width: 75%;
   }
 
-  div.col-medium-10 {
+  .col-medium-10 {
     -webkit-flex-basis: 83.333333333%;
         -ms-flex-preferred-size: 83.333333333%;
             flex-basis: 83.333333333%;
     max-width: 83.333333333%;
   }
 
-  div.col-medium-11 {
+  .col-medium-11 {
     -webkit-flex-basis: 91.666666666%;
         -ms-flex-preferred-size: 91.666666666%;
             flex-basis: 91.666666666%;
     max-width: 91.666666666%;
   }
 
-  div.col-medium-12 {
+  .col-medium-12 {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
     max-width: 100%;
   }
 
-  div.col-medium-top {
+  .col-medium-top {
     -webkit-align-self: flex-start;
         -ms-flex-item-align: start;
             align-self: flex-start;
   }
 
-  div.col-medium-bottom {
+  .col-medium-bottom {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
   }
 
-  div.col-medium-middle {
+  .col-medium-middle {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center;
@@ -601,103 +600,103 @@ div.col-middle {
 }
 /* Large viewport (desktop) */
 @media (min-width: 960px) {
-  div.col-large-1 {
+  .col-large-1 {
     -webkit-flex-basis: 8.3333333333%;
         -ms-flex-preferred-size: 8.3333333333%;
             flex-basis: 8.3333333333%;
     max-width: 8.3333333333%;
   }
 
-  div.col-large-2 {
+  .col-large-2 {
     -webkit-flex-basis: 16.666666666%;
         -ms-flex-preferred-size: 16.666666666%;
             flex-basis: 16.666666666%;
     max-width: 16.666666666%;
   }
 
-  div.col-large-3 {
+  .col-large-3 {
     -webkit-flex-basis: 25%;
         -ms-flex-preferred-size: 25%;
             flex-basis: 25%;
     max-width: 25%;
   }
 
-  div.col-large-4 {
+  .col-large-4 {
     -webkit-flex-basis: 33.333333333%;
         -ms-flex-preferred-size: 33.333333333%;
             flex-basis: 33.333333333%;
     max-width: 33.333333333%;
   }
 
-  div.col-large-5 {
+  .col-large-5 {
     -webkit-flex-basis: 41.666666666%;
         -ms-flex-preferred-size: 41.666666666%;
             flex-basis: 41.666666666%;
     max-width: 41.666666666%;
   }
 
-  div.col-large-6 {
+  .col-large-6 {
     -webkit-flex-basis: 50%;
         -ms-flex-preferred-size: 50%;
             flex-basis: 50%;
     max-width: 50%;
   }
 
-  div.col-large-7 {
+  .col-large-7 {
     -webkit-flex-basis: 58.333333333%;
         -ms-flex-preferred-size: 58.333333333%;
             flex-basis: 58.333333333%;
     max-width: 58.333333333%;
   }
 
-  div.col-large-8 {
+  .col-large-8 {
     -webkit-flex-basis: 66.666666666%;
         -ms-flex-preferred-size: 66.666666666%;
             flex-basis: 66.666666666%;
     max-width: 66.666666666%;
   }
 
-  div.col-large-9 {
+  .col-large-9 {
     -webkit-flex-basis: 75%;
         -ms-flex-preferred-size: 75%;
             flex-basis: 75%;
     max-width: 75%;
   }
 
-  div.col-large-10 {
+  .col-large-10 {
     -webkit-flex-basis: 83.333333333%;
         -ms-flex-preferred-size: 83.333333333%;
             flex-basis: 83.333333333%;
     max-width: 83.333333333%;
   }
 
-  div.col-large-11 {
+  .col-large-11 {
     -webkit-flex-basis: 91.666666666%;
         -ms-flex-preferred-size: 91.666666666%;
             flex-basis: 91.666666666%;
     max-width: 91.666666666%;
   }
 
-  div.col-large-12 {
+  .col-large-12 {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
     max-width: 100%;
   }
 
-  div.col-large-top {
+  .col-large-top {
     -webkit-align-self: flex-start;
         -ms-flex-item-align: start;
             align-self: flex-start;
   }
 
-  div.col-large-bottom {
+  .col-large-bottom {
     -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
             align-self: flex-end;
   }
 
-  div.col-large-middle {
+  .col-large-middle {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center;
