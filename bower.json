@@ -1,6 +1,6 @@
 {
   "name": "the-flex-grid",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "homepage": "http://jeroenoomsnl.github.io/the-flex-grid/",
   "authors": [
     "Jeroen Ooms (@jeroenooms)"
@@ -18,7 +18,9 @@
     "fluid",
     "columns",
     "subgrids",
-    "gutterless"
+    "gutterless",
+    "sass",
+    "scss"
   ],
   "license": "MIT",
   "ignore": [

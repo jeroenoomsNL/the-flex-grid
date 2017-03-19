@@ -1,6 +1,6 @@
 {
   "name": "the-flex-grid",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "author": "Jeroen Ooms (@jeroenooms)",
   "description": "The Flex Grid is a lightweight 12 columns grid, build with CSS3 feature flexbox. The grid is made for modern browsers, no support for dinosaurs.",
   "style": "dist/the-flex-grid.css",
@@ -42,7 +42,9 @@
     "fluid",
     "columns",
     "subgrids",
-    "gutterless"
+    "gutterless",
+    "sass",
+    "scss"
   ],
   "license": "MIT",
   "engines": {
