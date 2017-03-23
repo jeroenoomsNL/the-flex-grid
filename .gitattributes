@@ -1,1 +1,3 @@
 dist/demo/* linguist-vendored
+src/index.html linguist-vendored
+gulpfile.js linguist-vendored
