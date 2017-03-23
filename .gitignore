@@ -5,6 +5,5 @@ dist/demo
 .sass-cache
 app/bower_components
 node_modules
-.gitattributes
 .git
 .idea
