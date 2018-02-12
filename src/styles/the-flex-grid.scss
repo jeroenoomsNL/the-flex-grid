@@ -20,12 +20,11 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
 //
 @mixin viewport($viewport) {
 
-    @if $viewport != default {
-        $viewport: -#{$viewport};
-    }
-
     @if $viewport == default {
         $viewport: '';
+    }
+    @else {
+        $viewport: -#{$viewport};
     }
 
     @for $i from 1 through 12 {
