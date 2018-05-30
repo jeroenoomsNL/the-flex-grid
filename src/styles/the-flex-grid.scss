@@ -15,6 +15,9 @@ $theflexgrid-breakpoint-small: "(max-width: 767px)" !default;
 $theflexgrid-breakpoint-medium: "(min-width: 768px) and (max-width: 959px)" !default;
 $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
 
+// import dependencies
+@import "helpers/decimal-floor";
+
 //
 // Viewport mixin
 //
@@ -31,8 +34,8 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
         $percent: 100%/12*$i;
         
         .col#{$viewport}-#{$i} {
-            flex-basis: $percent;
-            max-width: $percent;
+            flex-basis: decimal-floor($percent, 10);
+            max-width: decimal-floor($percent, 10);
         }
     }
 

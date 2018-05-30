@@ -25,42 +25,18 @@ var config = {
 
 gulp.task('styles', function () {
 
-    var demo = $.rubySass(config.src.styles + '/**/*.scss', {
-            precision: 10,
-            sourcemap: false,
-            style: params.production ? 'compressed' : 'expanded',
-            loadPath: ['node_modules']
-        })
-        .on('error', function(error) {
-            console.log(error);
-        })
+    var demo = sassProcess(config.src.styles + '/**/*.scss') 
         .pipe($.plumber())
         .pipe(gulp.dest(config.demo.styles));
 
-    var grid = $.rubySass(config.src.styles + '/the-flex-grid.scss', {
-            precision: 10,
-            sourcemap: false,
-            style: params.production ? 'compressed' : 'expanded',
-            loadPath: ['node_modules']
-        })
-        .on('error', function(error) {
-            console.log(error);
-        })
+    var grid = sassProcess(config.src.styles + '/the-flex-grid.scss') 
         .pipe($.plumber())
         .pipe(gulp.dest(config.dist.base))
         .pipe($.cssmin())
         .pipe($.rename({suffix: '.min'}))
         .pipe(gulp.dest(config.dist.base));
 
-    var grid_prefixed = $.rubySass(config.src.styles + '/the-flex-grid.scss', {
-            precision: 10,
-            sourcemap: false,
-            style: params.production ? 'compressed' : 'expanded',
-            loadPath: ['node_modules']
-        })
-        .on('error', function(error) {
-            console.log(error);
-        })
+    var grid_prefixed = sassProcess(config.src.styles + '/the-flex-grid.scss') 
         .pipe($.plumber())
         .pipe($.autoprefixer(config.autoprefixer))
         .pipe($.rename({suffix: '.prefixed'}))
@@ -72,6 +48,15 @@ gulp.task('styles', function () {
 
     return merge(demo, grid, grid_prefixed);
 });
+
+function sassProcess(path) {
+    return gulp.src(path)
+        .pipe($.sass({
+            precision: 10,
+            outputStyle: params.production ? 'compressed' : 'expanded',
+            includePaths: ['node_modules']
+        }).on('error', $.sass.logError));
+}
 
 gulp.task('html', function () {
     return gulp.src([config.src.base + '/**/*.html'])
