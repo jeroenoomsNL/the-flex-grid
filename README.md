@@ -70,7 +70,6 @@ bower install the-flex-grid
 
 See the [demo page] for all the other features like reverse order and alignment.
 
-
 ## Usage of this source
 
 After cloning the repository:
@@ -84,15 +83,12 @@ Build the project:
 ```
 gulp
 ```
+
 Watch and auto refresh while editing:
 
 ```
 gulp watch
 ```
 
-
-
-[http://jeroenoomsnl.github.io/the-flex-grid]:http://jeroenoomsnl.github.io/the-flex-grid
-[demo page]:http://jeroenoomsnl.github.io/the-flex-grid
-
-
+[http://jeroenoomsnl.github.io/the-flex-grid]: http://jeroenoomsnl.github.io/the-flex-grid
+[demo page]: http://jeroenoomsnl.github.io/the-flex-grid
