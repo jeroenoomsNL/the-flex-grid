@@ -27,8 +27,8 @@ $initialize-heading-font-family: 'Lato', sans-serif;
 $initialize-heading-margins: 1em 0 0.75em;
 
 // import dependencies
-@import "initialize-css/dist/initialize.scss";
-@import "helpers/breakpoints";
+@import 'initialize-css/dist/initialize.scss';
+@import 'helpers/breakpoints';
 
 // extends
 %wrapper {
@@ -47,19 +47,13 @@ a {
     color: $color-accent;
 }
 
-code, pre {
+pre {
     background: white;
     border-radius: 0.3em;
     margin-bottom: 2em;
     padding: 1em 2em;
+    overflow-x: scroll;
 }
-
-code {
-    display: inline-block;
-    margin: 1em 0;
-    padding: 0.75em 1.5em;
-}
-
 .browserupgrade {
     background: #f1c40f;
     color: #000000;
@@ -90,7 +84,8 @@ code {
         }
     }
 
-    h1, h2 {
+    h1,
+    h2 {
         color: #f1f1f1;
     }
 
@@ -120,7 +115,6 @@ code {
     }
 
     .header-buttons {
-
         .header-button {
             background: $color-accent-dark;
             border-radius: 0.3em;
@@ -171,7 +165,6 @@ code {
     }
 }
 
-
 .demo .content {
     background: $color-accent;
     border-radius: 0.3em;
@@ -197,4 +190,3 @@ code {
     padding: 1em;
     text-align: left;
 }
-

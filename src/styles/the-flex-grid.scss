@@ -11,28 +11,26 @@ $theflexgrid-maxwidth: 960px !default;
 $theflexgrid-silent-only: false !default;
 
 // breakpoints
-$theflexgrid-breakpoint-small: "(max-width: 767px)" !default;
-$theflexgrid-breakpoint-medium: "(min-width: 768px) and (max-width: 959px)" !default;
-$theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
+$theflexgrid-breakpoint-small: '(max-width: 767px)' !default;
+$theflexgrid-breakpoint-medium: '(min-width: 768px) and (max-width: 959px)' !default;
+$theflexgrid-breakpoint-large: '(min-width: 960px)' !default;
 
 // import dependencies
-@import "helpers/decimal-floor";
+@import 'helpers/decimal-floor';
 
 //
 // Viewport mixin
 //
 @mixin viewport($viewport) {
-
     @if $viewport == default {
         $viewport: '';
-    }
-    @else {
+    } @else {
         $viewport: -#{$viewport};
     }
 
     @for $i from 1 through 12 {
-        $percent: 100%/12*$i;
-        
+        $percent: 100%/12 * $i;
+
         .col#{$viewport}-#{$i} {
             flex-basis: decimal-floor($percent, 10);
             max-width: decimal-floor($percent, 10);
@@ -98,12 +96,22 @@ $theflexgrid-breakpoint-large: "(min-width: 960px)" !default;
 %grid {
     margin: 0 auto;
     overflow: hidden;
+
+    &.full-height {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+
+        & > .row {
+            flex-grow: 1;
+        }
+    }
 }
 
 %row {
     display: flex;
     flex-wrap: wrap;
-    margin: 0  -#{$theflexgrid-gutter/2} 0 -#{$theflexgrid-gutter/2};
+    margin: 0 -#{$theflexgrid-gutter/2} 0 -#{$theflexgrid-gutter/2};
 
     & > * {
         box-sizing: border-box;

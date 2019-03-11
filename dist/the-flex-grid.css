@@ -8,6 +8,16 @@
   overflow: hidden;
 }
 
+.full-height.grid {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.full-height.grid > .row {
+  flex-grow: 1;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
