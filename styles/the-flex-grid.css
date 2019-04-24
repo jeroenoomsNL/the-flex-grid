@@ -145,6 +145,7 @@
 
 .row-reverse {
   flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
 }
 
 .row-equal > * {
@@ -247,6 +248,7 @@
   }
   .row-small-reverse {
     flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
   }
   .row-small-equal > * {
     display: flex;
@@ -344,6 +346,7 @@
   }
   .row-medium-reverse {
     flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
   }
   .row-medium-equal > * {
     display: flex;
@@ -441,6 +444,7 @@
   }
   .row-large-reverse {
     flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
   }
   .row-large-equal > * {
     display: flex;
