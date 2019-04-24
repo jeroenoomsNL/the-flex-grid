@@ -67,6 +67,7 @@ $theflexgrid-breakpoint-large: '(min-width: 960px)' !default;
 
     .row#{$viewport}-reverse {
         flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
     }
 
     .row#{$viewport}-equal > * {

@@ -90,16 +90,6 @@ gulp.task('watch', ['build'], function() {
         .on('change', browserSync.reload);
 });
 
-// deploy to Github Pages
-gulp.task('deploy', ['build'], function() {
-    params.message = params.m || params.message;
-
-    var options = {};
-    options.message = params.message || 'Update ' + new Date();
-
-    return gulp.src(config.demo.base + '/**/*').pipe($.ghPages(options));
-});
-
 gulp.task('build', ['styles', 'html']);
 
 gulp.task('default', ['build']);
